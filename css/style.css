@@ -338,3 +338,12 @@ nav {
 .exp-wrapper .location {
   color : var(--light-gray);
 }
+
+/*------------------
+ * Footer
+ *------------------*/
+
+ footer {
+  text-align     : center;
+  padding-bottom : 30px;
+}
