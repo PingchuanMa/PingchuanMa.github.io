@@ -32,9 +32,14 @@ body .row {
   padding-right : 0;
 }
 
+chinese-b {
+  font-weight : 900;
+}
+
 a {
   color           : var(--cardinal);
   text-decoration : none;
+  transition      : color 0.1s ease-in-out, border-color 0.1s ease-in-out;
 }
 
 a:hover {
@@ -198,6 +203,50 @@ nav {
 }
 
 /*------------------
+ * Bio
+ *------------------*/
+
+.bio-wrapper .info,
+.bio-wrapper .info:hover {
+  color : black;
+  text-decoration: none;
+}
+
+.bio-wrapper .chinese-name:hover {
+  text-decoration: none;
+  border-bottom: 1.5px solid currentColor;
+}
+
+.bio-wrapper .name-icon {
+  padding-left: 2px;
+  padding-right : 1px;
+}
+
+/*------------------
+ * Name
+ *------------------*/
+
+.name-wrapper a,
+.name-wrapper a:hover {
+  color           : black;
+  text-decoration : none;
+  border-bottom   : 1.5px dashed currentColor;
+}
+
+.name-wrapper .blockquote {
+  font-size : 14px;
+}
+
+.name-wrapper .blockquote-footer {
+  font-size : 12px;
+}
+
+.name-wrapper .blockquote-footer a,
+.name-wrapper .blockquote-footer a:hover {
+  color : currentColor;
+}
+
+/*------------------
  * Publications
  *------------------*/
 
@@ -337,13 +386,4 @@ nav {
 
 .exp-wrapper .location {
   color : var(--light-gray);
-}
-
-/*------------------
- * Footer
- *------------------*/
-
- footer {
-  text-align     : center;
-  padding-bottom : 30px;
 }
