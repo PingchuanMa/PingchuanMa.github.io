@@ -32,7 +32,7 @@ body .row {
   padding-right : 0;
 }
 
-chinese-b {
+zh-b {
   font-weight : 900;
 }
 
@@ -208,17 +208,17 @@ nav {
 
 .bio-wrapper .info,
 .bio-wrapper .info:hover {
-  color : black;
-  text-decoration: none;
+  color           : black;
+  text-decoration : none;
 }
 
-.bio-wrapper .chinese-name:hover {
-  text-decoration: none;
-  border-bottom: 1.5px solid currentColor;
+.bio-wrapper .zh-name:hover {
+  text-decoration : none;
+  border-bottom   : 1.5px dashed currentColor;
 }
 
 .bio-wrapper .name-icon {
-  padding-left: 2px;
+  padding-left  : 2px;
   padding-right : 1px;
 }
 
@@ -226,8 +226,8 @@ nav {
  * Name
  *------------------*/
 
-.name-wrapper a,
-.name-wrapper a:hover {
+.name-wrapper .zh-a,
+.name-wrapper .zh-a:hover {
   color           : black;
   text-decoration : none;
   border-bottom   : 1.5px dashed currentColor;
@@ -241,9 +241,17 @@ nav {
   font-size : 12px;
 }
 
-.name-wrapper .blockquote-footer a,
-.name-wrapper .blockquote-footer a:hover {
+.name-wrapper .blockquote-footer .zh-a,
+.name-wrapper .blockquote-footer .zh-a:hover,
+.name-wrapper .blockquote-footer .en-a,
+.name-wrapper .blockquote-footer .en-a:hover {
   color : currentColor;
+}
+
+.name-wrapper .blockquote-footer .en-a,
+.name-wrapper .blockquote-footer .en-a:hover {
+  text-decoration : underline;
+  border-bottom   : none;
 }
 
 /*------------------
