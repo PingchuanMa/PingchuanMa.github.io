@@ -22,7 +22,7 @@ body {
 
 body .container,
 body .container-fluid {
-  max-width : 1000px;
+  max-width : 992px;
 }
 
 body .row {
@@ -81,6 +81,10 @@ nav {
 
 .navbar {
   padding : 11px 0;
+}
+
+.navbar a:hover {
+  text-decoration : none;
 }
 
 .navbar-brand,
@@ -218,8 +222,9 @@ nav {
 }
 
 .bio-wrapper .name-icon {
-  padding-left  : 2px;
-  padding-right : 1px;
+  font-size    : 14px;
+  margin-left  : -4px;
+  margin-right : -4px;
 }
 
 /*------------------
@@ -238,7 +243,8 @@ nav {
 }
 
 .name-wrapper .blockquote-footer {
-  font-size : 12px;
+  margin-top : 0px;
+  font-size  : 12px;
 }
 
 .name-wrapper .blockquote-footer .zh-a,

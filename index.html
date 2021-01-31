@@ -13,18 +13,19 @@
     <link rel="shortcut icon" href="favicon.ico" rel=icon>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
-    <!-- font-awesome -->
-    <link href="css/fontawesome.min.css" rel="stylesheet">
-    <link href="css/brands.min.css" rel="stylesheet">
-    <link href="css/solid.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
     <!-- Academicons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">
 
     <!-- My CSS -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
     <!-- Smooth Scroll -->
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
@@ -40,13 +41,7 @@
       ga('send', 'pageview');
     </script>
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-
     <!-- My JS -->
-    <script src="js/script.js"></script>
 
     <title>Pingchuan Ma</title>
   </head>
@@ -56,24 +51,22 @@
         <!-- Navbar content -->
         <div class="container-fluid">
           <a class="navbar-brand" href="#"><serif>Pingchuan Ma</serif></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarToggler">
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-item nav-link" href="#home">Home</a>
+                <a class="nav-link" href="#home">Home</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" role="button" data-bs-toggle="dropdown">
                   Links
                 </a>
-                <div class="dropdown-menu dropdown-menu-right dropdown-menu-xl-left" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#bio">Biography</a>
-                  <a class="dropdown-item" href="#pub">Publications</a>
-                  <a class="dropdown-item" href="#edu">Education</a>
-                  <a class="dropdown-item" href="#exp">Experience</a>
-                </div>
+                <ul class="dropdown-menu dropdown-menu-start dropdown-menu-xl-start">
+                  <li><a class="dropdown-item" href="https://scholar.google.com/citations?user=EtCZmkwAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a></li>
+                  <li><a class="dropdown-item" href="https://dblp.org/pers/hd/m/Ma_0002:Pingchuan" target="_blank" rel="noopener noreferrer">DBLP</a></li>
+                </ul>
               </li>
             </ul>
           </div>
@@ -81,11 +74,11 @@
       </nav>
       <div class="sec-wrapper home-wrapper" id="home">
         <div class="row align-items-center">
-          <div class="picture">
-            <div class="col-sm-auto col-wrapper">
+          <div class="col-sm-auto col-wrapper">
+            <div class="picture">
               <img src="images/myself.png" class="img-responsive" alt="[Pingchuan :)]"
-                    onmouseover="this.src='images/McFlurry.png'"
-                    onmouseout="this.src='images/myself.png'"/>
+                onmouseover="this.src='images/McFlurry.png'"
+                onmouseout="this.src='images/myself.png'"/>
             </div>
           </div>
           <div class="col-sm col-wrapper">
@@ -95,10 +88,10 @@
               <div>Email: pcma (at) csail.mit.edu</div>
               <div>Office: MIT Stata Center 32-311</div>
               <ul class="social-icon">
-                <li><a title="Google Scholar" href="https://scholar.google.com/citations?user=EtCZmkwAAAAJ"><i class="ai ai-google-scholar" aria-hidden="true"></i></a></li>
-                <li><a title="DBLP" href="https://dblp.org/pers/hd/m/Ma_0002:Pingchuan"><i class="ai ai-dblp" aria-hidden="true"></i></a></li>
-                <li><a title="GitHub" href="https://github.com/PingchuanMa"><i class="fab fa-github" aria-hidden="true"></i></a></li>
-                <li><a title="Instagram" href="https://www.instagram.com/pika7ma/"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a title="Google Scholar" href="https://scholar.google.com/citations?user=EtCZmkwAAAAJ" target="_blank" rel="noopener noreferrer"><i class="ai ai-google-scholar"></i></a></li>
+                <li><a title="DBLP" href="https://dblp.org/pers/hd/m/Ma_0002:Pingchuan" target="_blank" rel="noopener noreferrer"><i class="ai ai-dblp"></i></a></li>
+                <li><a title="GitHub" href="https://github.com/PingchuanMa" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></i></a></li>
+                <li><a title="Instagram" href="https://www.instagram.com/pika7ma/" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></i></a></li>
               </ul>
             </div>
           </div>
@@ -124,11 +117,13 @@
         <div class="row">
           <div class="col col-wrapper">
             Pingchuan Ma
-            <a class="info" data-toggle="collapse" href="#nameContent" id="nameTrigger" title="Learn my name" smooth-scroll-ignore>
-              (<span class="zh-name">馬平川</span><sup class="name-icon"><i class="fas fa-info"></i></sup>)
+            <a class="info" data-bs-toggle="collapse" href="#nameContent" id="nameTrigger" title="Learn my name" smooth-scroll-ignore>
+              (<span class="zh-name">馬平川</span><sup class="name-icon"><i class="bi bi-info"></i></sup>)
             </a>
-            is a second-year Ph.D. student at <a href="https://www.csail.mit.edu/">MIT CSAIL</a> advised by <a href="https://cdfg.mit.edu/wojciech">Prof. Wojciech Matusik</a>.
-            Previously, he worked with <a href="https://mmcheng.net/cmm/">Prof. Ming-Ming Cheng</a> and <a href="http://ren-bo.net/">Prof. Bo Ren</a> at Nankai University.
+            is a second-year Ph.D. student at <a href="https://www.csail.mit.edu/" target="_blank" rel="noopener noreferrer">MIT CSAIL</a>
+            advised by <a href="https://cdfg.mit.edu/wojciech" target="_blank" rel="noopener noreferrer">Prof. Wojciech Matusik</a>.
+            Previously, he worked with <a href="https://mmcheng.net/cmm/" target="_blank" rel="noopener noreferrer">Prof. Ming-Ming Cheng</a>
+            and <a href="http://ren-bo.net/" target="_blank" rel="noopener noreferrer">Prof. Bo Ren</a> at Nankai University.
           </div>
         </div>
       </div>
@@ -143,20 +138,20 @@
             <div class="col col-wrapper">
               <p>
                 Family name:
-                <a class="zh-a" href="https://en.wiktionary.org/wiki/%E9%A6%AC"><ruby>
+                <a class="zh-a" href="https://en.wiktionary.org/wiki/%E9%A6%AC" target="_blank" rel="noopener noreferrer"><ruby>
                   <rb>馬</rb><rp>(</rp><rt>M&#462;</rt><rp>)</rp>
                 </ruby></a> means horse.
               </p>
               <p>
                 Given name:
-                <a class="zh-a" href="https://en.wiktionary.org/wiki/%E5%B9%B3%E5%B7%9D"><ruby>
+                <a class="zh-a" href="https://en.wiktionary.org/wiki/%E5%B9%B3%E5%B7%9D" target="_blank" rel="noopener noreferrer"><ruby>
                   <rb>平</rb><rp>(</rp><rt>P&#237;ng</rt><rp>)</rp>
                   <rb>川</rb><rp>(</rp><rt>chu&#257;n</rt><rp>)</rp>
                 </ruby></a> means flat and level ground without geographical barrier.
               </p>
               <p>
                 My full name is quoted from a Chinese idiom
-                <a class="zh-a" href="https://en.wiktionary.org/wiki/%E4%B8%80%E9%A6%AC%E5%B9%B3%E5%B7%9D">
+                <a class="zh-a" href="https://en.wiktionary.org/wiki/%E4%B8%80%E9%A6%AC%E5%B9%B3%E5%B7%9D" target="_blank" rel="noopener noreferrer">
                   <ruby>
                     <rb>一</rb><rp>(</rp><rt>y&#299;</rt><rp>)</rp>
                     <rb>馬</rb><rp>(</rp><rt>m&#462;</rt><rp>)</rp>
@@ -189,11 +184,11 @@
                 <footer class="blockquote-footer">
                   <ruby>
                     <rb>宋</rb><rp>(</rp><rt>S&#242;ng</rt><rp>)</rp>
-                  </ruby>·<a class="zh-a" href="https://en.wikipedia.org/wiki/Su_Shi"><ruby>
+                  </ruby>·<a class="zh-a" href="https://en.wikipedia.org/wiki/Su_Shi" target="_blank" rel="noopener noreferrer"><ruby>
                     <rb>蘇</rb><rp>(</rp><rt>S&#363;</rt><rp>)</rp>
                     <rb>軾</rb><rp>(</rp><rt>Sh&#236;</rt><rp>)</rp>
                   </ruby></a>
-                  <cite>《<a class="zh-a" href="https://zh.wikisource.org/zh/%E9%81%8A%E5%BE%91%E5%B1%B1">
+                  <cite>《<a class="zh-a" href="https://zh.wikisource.org/zh/%E9%81%8A%E5%BE%91%E5%B1%B1" target="_blank" rel="noopener noreferrer">
                     <ruby>
                       <rb>東</rb><rp>(</rp><rt>D&#333;ng</rt><rp>)</rp>
                       <rb>坡</rb><rp>(</rp><rt>p&#333;</rt><rp>)</rp>
@@ -213,8 +208,8 @@
               <blockquote class="blockquote text-center">
                 <p class="mb-0">There are lots of mountains from Tianmu Mountain, which have the might of fine horses galloping across flat ground.</p>
                 <footer class="blockquote-footer">
-                  <a class="en-a" href="https://en.wikipedia.org/wiki/Su_Shi">Su Shi</a> of the Song dynasty in
-                  <cite><a class="en-a" href="https://zh.wikisource.org/zh/%E9%81%8A%E5%BE%91%E5%B1%B1">Visit Jing Mountain</a></cite>
+                  <a class="en-a" href="https://en.wikipedia.org/wiki/Su_Shi" target="_blank" rel="noopener noreferrer">Su Shi</a> of the Song dynasty in
+                  <cite><a class="en-a" href="https://zh.wikisource.org/zh/%E9%81%8A%E5%BE%91%E5%B1%B1" target="_blank" rel="noopener noreferrer">Visit Jing Mountain</a></cite>
                 </footer>
               </blockquote>
             </div>
@@ -230,81 +225,87 @@
         <div class="row align-items-center section-item">
           <div class="col-xs-12 col-md-3 col-wrapper">
             <div class="figure">
-              <a href="http://cpmtl.csail.mit.edu/"><img src="images/cpmtl.png" alt="[CPMTL]"></a>
+              <a href="http://cpmtl.csail.mit.edu/" target="_blank" rel="noopener noreferrer">
+                <img src="images/cpmtl.png" alt="[CPMTL]">
+              </a>
             </div>
           </div>
           <div class="col-xs-12 col-md-9 col-wrapper">
             <div class="title">
-              <a href="http://cpmtl.csail.mit.edu/">
+              <a href="http://cpmtl.csail.mit.edu/" target="_blank" rel="noopener noreferrer">
                 Efficient Continuous Pareto Exploration in Multi-Task Learning
               </a>
             </div>
             <div class="authors">
               <me>Pingchuan Ma<sup>*</sup></me>,
-              <a href="https://people.csail.mit.edu/taodu/">Tao Du</a><sup>*</sup>,
+              <a href="https://people.csail.mit.edu/taodu/" target="_blank" rel="noopener noreferrer">Tao Du</a><sup>*</sup>,
               and
-              <a href="https://cdfg.mit.edu/wojciech">Wojciech Matusik</a>
+              <a href="https://cdfg.mit.edu/wojciech" target="_blank" rel="noopener noreferrer">Wojciech Matusik</a>
             </div>
             <div>International Conference on Machine Learning (<abbr>ICML</abbr>), 2020</div>
-            <a href="http://cpmtl.csail.mit.edu/">[Project Page]</a>
-            <a href="https://arxiv.org/abs/2006.16434">[Paper]</a>
-            <a href="https://github.com/mit-gfx/ContinuousParetoMTL">[Code]</a>
-            <a href="https://icml.cc/virtual/2020/poster/5856">[Video]</a>
-            <a href="http://cpmtl.csail.mit.edu/data/slides.pdf">[Slides]</a>
+            <a href="http://cpmtl.csail.mit.edu/" target="_blank" rel="noopener noreferrer">[Project Page]</a>
+            <a href="https://arxiv.org/abs/2006.16434" target="_blank" rel="noopener noreferrer">[Paper]</a>
+            <a href="https://github.com/mit-gfx/ContinuousParetoMTL" target="_blank" rel="noopener noreferrer">[Code]</a>
+            <a href="https://icml.cc/virtual/2020/poster/5856" target="_blank" rel="noopener noreferrer">[Video]</a>
+            <a href="http://cpmtl.csail.mit.edu/data/slides.pdf" target="_blank" rel="noopener noreferrer">[Slides]</a>
           </div>
         </div>
         <div class="row align-items-center section-item">
           <div class="col-xs-12 col-md-3 col-wrapper">
             <div class="figure">
-              <a href="http://people.csail.mit.edu/jiex/papers/PGMORL/"><img src="images/pgmorl.gif" alt="[PGMORL]"></a>
+              <a href="http://people.csail.mit.edu/jiex/papers/PGMORL/" target="_blank" rel="noopener noreferrer">
+                <img src="images/pgmorl.gif" alt="[PGMORL]">
+              </a>
             </div>
           </div>
           <div class="col-xs-12 col-md-9 col-wrapper">
             <div class="title">
-              <a href="http://people.csail.mit.edu/jiex/papers/PGMORL/">
+              <a href="http://people.csail.mit.edu/jiex/papers/PGMORL/" target="_blank" rel="noopener noreferrer">
                 Prediction-guided Multi-Objective Reinforcement Learning for Continuous Robot Control
               </a>
             </div>
             <div class="authors">
-              <a href="https://people.csail.mit.edu/jiex/">Jie Xu</a>,
-              <a href="https://www.yunshengtian.com/">Yunsheng Tian</a>,
+              <a href="https://people.csail.mit.edu/jiex/" target="_blank" rel="noopener noreferrer">Jie Xu</a>,
+              <a href="https://www.yunshengtian.com/" target="_blank" rel="noopener noreferrer">Yunsheng Tian</a>,
               <me>Pingchuan Ma</me>,
-              <a href="http://danielarus.csail.mit.edu/">Daniela Rus</a>,
-              <a href="http://faculty.cs.tamu.edu/sueda/">Shinjiro Sueda</a>,
+              <a href="http://danielarus.csail.mit.edu/" target="_blank" rel="noopener noreferrer">Daniela Rus</a>,
+              <a href="http://faculty.cs.tamu.edu/sueda/" target="_blank" rel="noopener noreferrer">Shinjiro Sueda</a>,
               and
-              <a href="https://cdfg.mit.edu/wojciech">Wojciech Matusik</a>
+              <a href="https://cdfg.mit.edu/wojciech" target="_blank" rel="noopener noreferrer">Wojciech Matusik</a>
             </div>
             <div>International Conference on Machine Learning (<abbr>ICML</abbr>), 2020</div>
-            <a href="http://people.csail.mit.edu/jiex/papers/PGMORL/">[Project Page]</a>
-            <a href="https://people.csail.mit.edu/jiex/papers/PGMORL/paper.pdf">[Paper]</a>
-            <a href="https://github.com/mit-gfx/PGMORL">[Code]</a>
-            <a href="https://people.csail.mit.edu/jiex/papers/PGMORL/video.mp4">[Video]</a>
+            <a href="http://people.csail.mit.edu/jiex/papers/PGMORL/" target="_blank" rel="noopener noreferrer">[Project Page]</a>
+            <a href="https://people.csail.mit.edu/jiex/papers/PGMORL/paper.pdf" target="_blank" rel="noopener noreferrer">[Paper]</a>
+            <a href="https://github.com/mit-gfx/PGMORL" target="_blank" rel="noopener noreferrer">[Code]</a>
+            <a href="https://people.csail.mit.edu/jiex/papers/PGMORL/video.mp4" target="_blank" rel="noopener noreferrer">[Video]</a>
           </div>
         </div>
         <div class="row align-items-center section-item">
           <div class="col-xs-12 col-md-3 col-wrapper">
             <div class="figure">
-              <a href="https://gamma.cs.unc.edu/DRL_FluidRigid/"><img src="images/rlfluid.png" alt="[RLFluid]"></a>
+              <a href="https://gamma.cs.unc.edu/DRL_FluidRigid/" target="_blank" rel="noopener noreferrer">
+                <img src="images/rlfluid.png" alt="[RLFluid]">
+              </a>
             </div>
           </div>
           <div class="col-xs-12 col-md-9 col-wrapper">
             <div class="title">
-              <a href="https://gamma.cs.unc.edu/DRL_FluidRigid/">
+              <a href="https://gamma.cs.unc.edu/DRL_FluidRigid/" target="_blank" rel="noopener noreferrer">
                 Fluid Directed Rigid Body Control using Deep Reinforcement Learning
               </a>
             </div>
             <div class="authors">
               <me>Pingchuan Ma<sup>*</sup></me>,
-              <a href="https://www.yunshengtian.com/">Yunsheng Tian</a><sup>*</sup>,
-              <a href="https://scholar.google.com/citations?user=QVwFMxwAAAAJ">Zherong Pan</a>,
-              <a href="http://ren-bo.net/">Bo Ren</a>,
+              <a href="https://www.yunshengtian.com/" target="_blank" rel="noopener noreferrer">Yunsheng Tian</a><sup>*</sup>,
+              <a href="https://scholar.google.com/citations?user=QVwFMxwAAAAJ" target="_blank" rel="noopener noreferrer">Zherong Pan</a>,
+              <a href="http://ren-bo.net/" target="_blank" rel="noopener noreferrer">Bo Ren</a>,
               and
-              <a href="http://www.cs.unc.edu/~dm/">Dinesh Manocha</a>
+              <a href="http://www.cs.unc.edu/~dm/" target="_blank" rel="noopener noreferrer">Dinesh Manocha</a>
             </div>
             <div>ACM Transactions on Graphics, Proceedings of ACM <abbr>SIGGRAPH</abbr>, 2018</div>
-            <a href="https://gamma.cs.unc.edu/DRL_FluidRigid">[Project Page]</a>
-            <a href="http://people.csail.mit.edu/pcma/data/rlfluid/paper.pdf">[Paper]</a>
-            <a href="https://youtu.be/O8QtAi2cHBI">[Video]</a>
+            <a href="https://gamma.cs.unc.edu/DRL_FluidRigid" target="_blank" rel="noopener noreferrer">[Project Page]</a>
+            <a href="http://people.csail.mit.edu/pcma/data/rlfluid/paper.pdf" target="_blank" rel="noopener noreferrer">[Paper]</a>
+            <a href="https://youtu.be/O8QtAi2cHBI" target="_blank" rel="noopener noreferrer">[Video]</a>
           </div>
         </div>
       </div>
@@ -317,26 +318,26 @@
         <div class="row align-items-center section-item">
           <div class="col-xs-12 col-md-3 col-wrapper">
             <div class="figure">
-              <a href="https://arxiv.org/abs/1911.11319"><img src="images/vsn.png" alt="[VSN]"></a>
+              <a href="https://arxiv.org/abs/1911.11319" target="_blank" rel="noopener noreferrer"><img src="images/vsn.png" alt="[VSN]"></a>
             </div>
           </div>
           <div class="col-xs-12 col-md-9 col-wrapper">
             <div class="title">
-              <a href="https://arxiv.org/abs/1911.11319">
+              <a href="https://arxiv.org/abs/1911.11319" target="_blank" rel="noopener noreferrer">
                 Learning Efficient Video Representation with Video Shuffle Networks
               </a>
             </div>
             <div class="authors">
               <me>Pingchuan Ma<sup>*</sup></me>,
-              <a href="https://www.yoosan.me/">Yao Zhou</a><sup>*</sup>,
+              <a href="https://www.yoosan.me/" target="_blank" rel="noopener noreferrer">Yao Zhou</a><sup>*</sup>,
               Yu Lu,
               and
-              <a href="http://www.statfe.com/">Wei Zhang</a>
+              <a href="http://www.statfe.com/" target="_blank" rel="noopener noreferrer">Wei Zhang</a>
             </div>
             <div>arXiv preprint, 2019</div>
-            <a href="https://arxiv.org/abs/1911.11319">[arXiv]</a>
-            <a href="http://people.csail.mit.edu/pcma/data/vsn/paper.pdf">[Paper]</a>
-            <a href="http://people.csail.mit.edu/pcma/data/vsn/supp.pdf">[Appendix]</a>
+            <a href="https://arxiv.org/abs/1911.11319" target="_blank" rel="noopener noreferrer">[arXiv]</a>
+            <a href="http://people.csail.mit.edu/pcma/data/vsn/paper.pdf" target="_blank" rel="noopener noreferrer">[Paper]</a>
+            <a href="http://people.csail.mit.edu/pcma/data/vsn/supp.pdf" target="_blank" rel="noopener noreferrer">[Appendix]</a>
           </div>
         </div>
       </div>
@@ -344,56 +345,55 @@
         <div class="row">
           <div class="col col-wrapper">
             <div class="section-title">Education</div>
-            <a data-toggle="collapse" href="#eduContent" id="eduTrigger" title="Hide education" smooth-scroll-ignore>[hide]</a>
+            <a data-bs-toggle="collapse" href="#moreContent" id="moreTrigger" title="Load More" smooth-scroll-ignore>
+              [more]
+            </a>
           </div>
         </div>
-        <div class="collapse show" id="eduContent">
-          <div class="row align-items-center section-item">
-            <div class="col-md-9 col-wrapper">
-              <div class="title">
-                <a href="https://www.mit.edu/">Massachusetts Institute of Technology</a>
-              </div>
-              <div class="info">
-                <div>Ph.D. Student in Computer Science</a></div>
-                <div class="location">Cambridge, MA</div>
-              </div>
+        <div class="row align-items-center section-item">
+          <div class="col-md-9 col-wrapper">
+            <div class="title">
+              <a href="https://www.mit.edu/" target="_blank" rel="noopener noreferrer">Massachusetts Institute of Technology</a>
             </div>
-            <div class="col-md-3 col-wrapper">
-              <time>Sep. 2019 - Present</time>
+            <div class="info">
+              <div>Ph.D. Student in Computer Science</a></div>
+              <div class="location">Cambridge, MA</div>
             </div>
           </div>
-          <div class="row align-items-center section-item">
-            <div class="col-md-9 col-wrapper">
-              <div class="title">
-                <a href="https://www.nankai.edu.cn/">Nankai University</a>
-              </div>
-              <div class="info">
-                <div>B.E. in Software Engineering</div>
-                <div class="location">Tianjin, China</div>
-              </div>
+          <div class="col-md-3 col-wrapper">
+            <time>Sep. 2019 - Present</time>
+          </div>
+        </div>
+        <div class="row align-items-center section-item">
+          <div class="col-md-9 col-wrapper">
+            <div class="title">
+              <a href="https://www.nankai.edu.cn/" target="_blank" rel="noopener noreferrer">Nankai University</a>
             </div>
-            <div class="col-md-3 col-wrapper">
-              <time>Sep. 2015 - Jun. 2019</time>
+            <div class="info">
+              <div>B.E. in Software Engineering</div>
+              <div class="location">Tianjin, China</div>
             </div>
+          </div>
+          <div class="col-md-3 col-wrapper">
+            <time>Sep. 2015 - Jun. 2019</time>
           </div>
         </div>
       </div>
-      <div class="sec-wrapper exp-wrapper" id="exp">
-        <div class="row">
-          <div class="col col-wrapper">
-            <div class="section-title">Experience</div>
-            <a data-toggle="collapse" href="#expContent" id="expTrigger" title="Show experience" smooth-scroll-ignore>[show]</a>
+      <div class="collapse" id="moreContent">
+        <div class="sec-wrapper exp-wrapper" id="exp">
+          <div class="row">
+            <div class="col col-wrapper">
+              <div class="section-title">Experience</div>
+            </div>
           </div>
-        </div>
-        <div class="collapse" id="expContent">
           <div class="row align-items-center section-item">
             <div class="col-md-9 col-wrapper">
               <div class="title">
-                <a href="https://www.csail.mit.edu/">MIT Computer Science and Artificial Intelligence Laboratory</a>
+                <a href="https://www.csail.mit.edu/" target="_blank" rel="noopener noreferrer">MIT Computer Science and Artificial Intelligence Laboratory</a>
               </div>
               <div class="info">
-                <div>Research Assistant | <a href="https://cdfg.mit.edu/">The Computational Design and Fabrication Group</a></div>
-                <div>Advisor: <a href="https://cdfg.mit.edu/wojciech">Prof. Wojciech Matusik</a></div>
+                <div>Research Assistant | <a href="https://cdfg.mit.edu/" target="_blank" rel="noopener noreferrer">The Computational Design and Fabrication Group</a></div>
+                <div>Advisor: <a href="https://cdfg.mit.edu/wojciech" target="_blank" rel="noopener noreferrer">Prof. Wojciech Matusik</a></div>
                 <div class="location">Cambridge, MA</div>
               </div>
             </div>
@@ -408,7 +408,10 @@
               </div>
               <div class="info">
                 <div>Research Intern | <a href="https://ailab.bytedance.com/">US CV Lab</a></div>
-                <div>Advisors: <a href="https://scholar.google.com.sg/citations?user=OEZ816YAAAAJ">Dr. Xiaojie Jin</a> and <a href="http://www.ifp.illinois.edu/~jyang29/">Dr. Jianchao Yang</a></div>
+                <div>Advisors:
+                  <a href="https://scholar.google.com.sg/citations?user=OEZ816YAAAAJ" target="_blank" rel="noopener noreferrer">Dr. Xiaojie Jin</a>
+                  and <a href="http://www.ifp.illinois.edu/~jyang29/" target="_blank" rel="noopener noreferrer">Dr. Jianchao Yang</a>
+                </div>
                 <div class="location">Beijing, China</div>
               </div>
             </div>
@@ -419,11 +422,11 @@
           <div class="row align-items-center section-item">
             <div class="col-md-9 col-wrapper">
               <div class="title">
-                <a href="https://www.hku.hk/">The University of Hong Kong</a>
+                <a href="https://www.hku.hk/" target="_blank" rel="noopener noreferrer">The University of Hong Kong</a>
               </div>
               <div class="info">
-                <div>Research Assistant | <a href="https://www.cs.hku.hk/">The Department of Computer Science</a></div>
-                <div>Advisor: <a href="https://sites.google.com/site/panjia/">Prof. Jia Pan</a></div>
+                <div>Research Assistant | <a href="https://www.cs.hku.hk/" target="_blank" rel="noopener noreferrer">The Department of Computer Science</a></div>
+                <div>Advisor: <a href="https://sites.google.com/site/panjia/" target="_blank" rel="noopener noreferrer">Prof. Jia Pan</a></div>
                 <div class="location">Hong Kong</div>
               </div>
             </div>
@@ -434,11 +437,14 @@
           <div class="row align-items-center section-item">
             <div class="col-md-9 col-wrapper">
               <div class="title">
-                <a href="https://www.sensetime.com/">SenseTime Research</a>
+                <a href="https://www.sensetime.com/" target="_blank" rel="noopener noreferrer">SenseTime Research</a>
               </div>
               <div class="info">
                 <div>Research Intern | BigVideo Team</div>
-                <div>Advisors: <a href="http://luoping.me/">Prof. Ping Luo</a> and <a href="http://www.statfe.com/">Dr. Wei Zhang</a></div>
+                <div>Advisors:
+                  <a href="http://luoping.me/" target="_blank" rel="noopener noreferrer">Prof. Ping Luo</a>
+                  and <a href="http://www.statfe.com/" target="_blank" rel="noopener noreferrer">Dr. Wei Zhang</a>
+                </div>
                 <div class="location">Shenzhen, China</div>
               </div>
             </div>
@@ -449,11 +455,14 @@
           <div class="row align-items-center section-item">
             <div class="col-md-9 col-wrapper">
               <div class="title">
-                <a href="https://www.nankai.edu.cn/">Nankai University</a>
+                <a href="https://www.nankai.edu.cn/ target="_blank" rel="noopener noreferrer"">Nankai University</a>
               </div>
               <div class="info">
-                <div>Research Assistant | <a href="https://mmcheng.net/">Media Computing Lab</a></div>
-                <div>Advisors: <a href="https://mmcheng.net/cmm/">Prof. Ming-Ming Cheng</a> and <a href="http://ren-bo.net/">Prof. Bo Ren</a></div>
+                <div>Research Assistant | <a href="https://mmcheng.net/" target="_blank" rel="noopener noreferrer">Media Computing Lab</a></div>
+                <div>Advisors:
+                  <a href="https://mmcheng.net/cmm/" target="_blank" rel="noopener noreferrer">Prof. Ming-Ming Cheng</a>
+                  and <a href="http://ren-bo.net/" target="_blank" rel="noopener noreferrer">Prof. Bo Ren</a>
+                </div>
                 <div class="location">Tianjin, China</div>
               </div>
             </div>
@@ -463,13 +472,10 @@
           </div>
         </div>
       </div>
-      <!-- <footer class="footer">
-        <div class="text-muted">Copyright &copy; <span id="year"></span> Pingchuan Ma. All Rights Reserved.</div>
-        <script>var d=new Date();document.getElementById('year').innerHTML=d.getFullYear();</script>
-      </footer> -->
     </div>
     <script>
       var scroll = new SmoothScroll('a[href*="#"]', {speed: 700, ignore: '[smooth-scroll-ignore]'});
     </script>
+    <script src="js/script.js"></script>
   </body>
 </html>
