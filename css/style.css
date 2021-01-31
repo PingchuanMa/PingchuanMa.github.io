@@ -6,7 +6,7 @@
 }
 
 :root {
-  --serif-font   : 'Palatino Linotype', Palatino, 'DejaVu Serif', Georgia, serif;
+  --serif-font   : 'Palatino Linotype', Palatino, 'Linux Libertine', 'Linux Libertine O', 'DejaVu Serif', Georgia, serif;
   --serif-weight : normal;
 }
 
@@ -54,7 +54,7 @@ a:hover {
 
 .section-title {
   font-family    : var(--serif-font);
-  font-size      : 20px;
+  font-size      : 24px;
   font-weight    : var(--serif-weight);
   padding-bottom : 10px;
   display        : inline-block;
@@ -268,7 +268,7 @@ nav {
   color       : black;
   font-weight : var(--serif-weight);
   font-family : var(--serif-font);
-  font-size   : 16px;
+  font-size   : 18px;
 }
 
 .pub-wrapper .title a:hover {
@@ -317,7 +317,7 @@ nav {
  *------------------*/
 
 .exp-wrapper .title a {
-  font-size   : 16px;
+  font-size   : 18px;
   font-weight : var(--serif-weight);
   font-family : var(--serif-font);
 }
