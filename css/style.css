@@ -332,9 +332,15 @@ nav {
   font-size : 14px;
 }
 
+.exp-wrapper time fix {
+  display: inline-block;
+  min-width  : 62px;
+  text-align : left;
+}
+
 @media (min-width: 768px) {
   .exp-wrapper time {
-    text-align : center;
+    text-align : right;
     display    : block;
   }
 }
