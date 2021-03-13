@@ -6,7 +6,7 @@
 }
 
 :root {
-  --serif-font  : 'Linux Libertine', 'Linux Libertine O', 'Palatino Linotype', Palatino, 'DejaVu Serif', Georgia, serif;
+  --serif-font  : 'Palatino Linotype', Palatino, 'DejaVu Serif', Georgia, serif;
   --serif-weight: 600;
 }
 
@@ -189,7 +189,7 @@ nav {
   text-align    : center;
   border-radius : 2px;
   border        : 2px solid var(--very-light-gray);
-  line-height   : 1.6em;
+  line-height   : 26px;
 }
 
 .home-wrapper .social-icon li a:hover {
