@@ -13,10 +13,10 @@
     <link rel="shortcut icon" href="favicon.ico" rel=icon>
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
 
     <!-- Academicons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">
@@ -25,7 +25,7 @@
     <link href="css/style.css" rel="stylesheet">
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
     <!-- Google Analytics -->
     <script>
@@ -110,18 +110,21 @@
         <div class="row">
           <div class="col col-wrapper">
             <div class="section-title">Biography</div>
+            <a data-bs-toggle="collapse" href="#moreContent" id="moreTrigger" title="Load More">
+              [more]
+            </a>
           </div>
         </div>
         <div class="row">
-          <div class="col col-wrapper">
+          <div class="col col-wrapper section-item">
             Pingchuan Ma
             <a class="info" data-bs-toggle="collapse" href="#nameContent" id="nameTrigger" title="Learn my name" onclick="return false">
               (<span class="zh-name">馬平川</span><sup class="name-icon"><i class="bi bi-info"></i></sup>)
             </a>
             is a second-year Ph.D. student at <a href="https://www.csail.mit.edu/" target="_blank" rel="noopener noreferrer">MIT CSAIL</a>
             advised by <a href="https://cdfg.mit.edu/wojciech" target="_blank" rel="noopener noreferrer">Prof. Wojciech Matusik</a>.
-            Previously, he worked with <a href="https://mmcheng.net/cmm/" target="_blank" rel="noopener noreferrer">Prof. Ming-Ming Cheng</a>
-            and <a href="http://ren-bo.net/" target="_blank" rel="noopener noreferrer">Prof. Bo Ren</a> at Nankai University.
+            Previously, he worked with <a href="http://ren-bo.net/" target="_blank" rel="noopener noreferrer">Prof. Bo Ren</a> and
+            <a href="https://mmcheng.net/cmm/" target="_blank" rel="noopener noreferrer">Prof. Ming-Ming Cheng</a> at Nankai University.
           </div>
         </div>
       </div>
@@ -133,7 +136,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col col-wrapper">
+            <div class="col col-wrapper section-item">
               <p>
                 Family name:
                 <a class="zh-a" href="https://en.wiktionary.org/wiki/%E9%A6%AC" target="_blank" rel="noopener noreferrer"><ruby>
@@ -259,7 +262,7 @@
           <div class="col-xs-12 col-md-9 col-wrapper">
             <div class="title">
               <a href="http://people.csail.mit.edu/jiex/papers/PGMORL/" target="_blank" rel="noopener noreferrer">
-                Prediction-guided Multi-Objective Reinforcement Learning for Continuous Robot Control
+                Prediction-Guided Multi-Objective Reinforcement Learning for Continuous Robot Control
               </a>
             </div>
             <div class="authors">
@@ -339,45 +342,42 @@
           </div>
         </div>
       </div>
-      <div class="sec-wrapper exp-wrapper" id="edu">
-        <div class="row">
-          <div class="col col-wrapper">
-            <div class="section-title">Education</div>
-            <a data-bs-toggle="collapse" href="#moreContent" id="moreTrigger" title="Load More">
-              [more]
-            </a>
+      <div class="collapse anchor" id="moreContent">
+        <div class="sec-wrapper exp-wrapper" id="edu">
+          <div class="row">
+            <div class="col col-wrapper">
+              <div class="section-title">Education</div>
+            </div>
+          </div>
+          <div class="row align-items-center section-item">
+            <div class="col-md-9 col-wrapper">
+              <div class="title">
+                <a href="https://www.mit.edu/" target="_blank" rel="noopener noreferrer">Massachusetts Institute of Technology</a>
+              </div>
+              <div class="info">
+                <div>Ph.D. Student in Computer Science</a></div>
+                <div class="location">Cambridge, MA</div>
+              </div>
+            </div>
+            <div class="col-md-3 col-wrapper">
+              <time><fix>Sep. 2019</fix> - <fix>Present</fix></time>
+            </div>
+          </div>
+          <div class="row align-items-center section-item">
+            <div class="col-md-9 col-wrapper">
+              <div class="title">
+                <a href="https://www.nankai.edu.cn/" target="_blank" rel="noopener noreferrer">Nankai University</a>
+              </div>
+              <div class="info">
+                <div>B.E. in Software Engineering</div>
+                <div class="location">Tianjin, China</div>
+              </div>
+            </div>
+            <div class="col-md-3 col-wrapper">
+              <time><fix>Sep. 2015</fix> - <fix>Jun. 2019</fix></time>
+            </div>
           </div>
         </div>
-        <div class="row align-items-center section-item">
-          <div class="col-md-9 col-wrapper">
-            <div class="title">
-              <a href="https://www.mit.edu/" target="_blank" rel="noopener noreferrer">Massachusetts Institute of Technology</a>
-            </div>
-            <div class="info">
-              <div>Ph.D. Student in Computer Science</a></div>
-              <div class="location">Cambridge, MA</div>
-            </div>
-          </div>
-          <div class="col-md-3 col-wrapper">
-            <time><fix>Sep. 2019</fix> - <fix>Present</fix></time>
-          </div>
-        </div>
-        <div class="row align-items-center section-item">
-          <div class="col-md-9 col-wrapper">
-            <div class="title">
-              <a href="https://www.nankai.edu.cn/" target="_blank" rel="noopener noreferrer">Nankai University</a>
-            </div>
-            <div class="info">
-              <div>B.E. in Software Engineering</div>
-              <div class="location">Tianjin, China</div>
-            </div>
-          </div>
-          <div class="col-md-3 col-wrapper">
-            <time><fix>Sep. 2015</fix> - <fix>Jun. 2019</fix></time>
-          </div>
-        </div>
-      </div>
-      <div class="collapse" id="moreContent">
         <div class="sec-wrapper exp-wrapper" id="exp">
           <div class="row">
             <div class="col col-wrapper">
@@ -470,7 +470,7 @@
           </div>
         </div>
       </div>
-      <footer class="footer">
+      <footer class="footer sec-wrapper">
         <div class="text-muted">Copyright &copy; <span id="year"></span> Pingchuan Ma. All Rights Reserved.</div>
         <div class="text-muted row">
           <div class="col left">
