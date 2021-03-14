@@ -6,7 +6,7 @@
 }
 
 :root {
-  --serif-font  : 'Palatino Linotype', Palatino, 'DejaVu Serif', Georgia, serif;
+  --serif-font  : 'Linux Libertine', 'Linux Libertine O', 'Palatino Linotype', Palatino, 'DejaVu Serif', Georgia, serif;
   --serif-weight: 600;
 }
 
