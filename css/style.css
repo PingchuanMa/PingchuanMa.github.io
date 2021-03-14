@@ -6,8 +6,8 @@
 }
 
 :root {
-  --serif-font  : 'Linux Libertine', 'Linux Libertine O', 'Palatino Linotype', Palatino, 'DejaVu Serif', Georgia, serif;
-  --serif-weight: 600;
+  --serif-font   : 'Linux Libertine', 'Linux Libertine O', 'Palatino Linotype', Palatino, 'DejaVu Serif', Georgia, serif;
+  --serif-weight : 600;
 }
 
 body {
@@ -309,7 +309,7 @@ nav {
 @media (max-width: 767.98px) {
   .pub-wrapper .figure {
     display : none;
-  } 
+  }
 }
 
 /*------------------
