@@ -17,7 +17,6 @@ body {
   color       : black;
   font-weight : normal;
   background  : white;
-  margin-top  : 50px;
 }
 
 body .container,
@@ -34,11 +33,6 @@ body .row {
 
 zh-b {
   font-weight : 900;
-}
-
-.anchor {
-  margin-top : -30px;
-  padding-top : 30px;
 }
 
 a {
@@ -62,6 +56,7 @@ a:hover {
   font-weight    : var(--serif-weight);
   font-size      : 24px;
   display        : inline-block;
+  padding-top    : 20px;
 }
 
 .col-wrapper {
@@ -70,85 +65,16 @@ a:hover {
 }
 
 .sec-wrapper {
-  margin-top : 40px;
-}
-
-/*------------------
- * Navigation Bar
- *------------------*/
-
-nav {
-  background-color : var(--cardinal);
-}
-
-.navbar {
-  padding : 11px 0;
-}
-
-.navbar a:hover {
-  text-decoration : none;
-}
-
-.navbar-brand,
-.nav-link {
-  padding-top    : 0;
-  padding-bottom : 0;
-}
-
-.navbar-brand {
-  font-family : var(--serif-font);
-}
-
-.navbar-dark .navbar-brand,
-.navbar-dark .navbar-nav .nav-link {
-  color : white;
-}
-
-.navbar-toggler {
-  font-size : 14px;
-  padding   : 1px 6px;
-}
-
-.navbar .dropdown-menu {
-  font-size : 14px;
-}
-
-.navbar .dropdown-menu .dropdown-item:active {
-  background-color : var(--cardinal);
-}
-
-@media (max-width: 575.98px) {
-  .navbar .container,
-  .navbar .container-fluid {
-    padding-right : 15px;
-    padding-left  : 15px;
-  }
-
-  .navbar .nav-item {
-    padding-top : 2px;
-  }
-  .navbar .dropdown-item {
-    padding-top    : 1px;
-    padding-bottom : 1px;
-  }
+  margin-top : 20px;
 }
 
 /*-----------------
  * Home
  *------------------*/
 
-.home-wrapper {
-  padding-top : 20px;
-}
-
 .home-wrapper .picture img {
-  width : 100%;
-}
-
-@media (min-width: 576px) {
-  .home-wrapper .picture img {
-    max-width : 200px;
-  }
+  width     : 100%;
+  max-width : 200px;
 }
 
 .home-wrapper .description {
@@ -157,7 +83,7 @@ nav {
 
 .home-wrapper .description .name {
   font-size      : 36px;
-  font-weight    : var(--serif-weight);
+  font-weight    : normal;
   font-family    : var(--serif-font);
 }
 
@@ -241,7 +167,7 @@ nav {
 }
 
 .name-wrapper .blockquote {
-  font-size : 14px;
+  font-size : 16px;
 }
 
 .name-wrapper .blockquote-footer {
