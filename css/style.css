@@ -5,6 +5,20 @@
   --dark-gray       : #8A8B8C;
 }
 
+@font-face {
+  font-family: 'Linux Libertine'; /* normal */
+  src: url('../fonts/linux-libertine/LinLibertine_R.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Linux Libertine'; /* bold */
+  src: url('../fonts/linux-libertine/LinLibertine_RZ.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
 :root {
   --serif-font   : 'Linux Libertine', 'Linux Libertine O', 'Palatino Linotype', Palatino, 'DejaVu Serif', Georgia, serif;
   --serif-weight : 600;
@@ -21,7 +35,7 @@ body {
 
 body .container,
 body .container-fluid {
-  max-width : 1100px;
+  max-width : 1200px;
 }
 
 body .row {
@@ -228,7 +242,7 @@ a:hover {
 .pub-wrapper .figure img {
   margin    : auto;
   padding   : 10px 20px 10px 0;
-  max-width : 300px;
+  max-width : 240px;
   width     : 100%;
 }
 

@@ -7,9 +7,10 @@ moreContent.addEventListener('shown.bs.collapse', function () {
 
 var counter = 0;
 var hoverImages = [
-  'images/McFlurry.png',
-  'images/Sophie.png',
-  'images/Sofia.png',
+  'images/profile/McFlurry.png',
+  'images/profile/Sophie.png',
+  'images/profile/Sofia.png',
+  'images/profile/Mayo.png',
 ];
 
 var profile = document.getElementById('profile');
@@ -18,5 +19,5 @@ profile.addEventListener('mouseenter', function() {
   counter = (counter + 1) % hoverImages.length;
 })
 profile.addEventListener('mouseleave', function() {
-  this.src = 'images/myself.png';
+  this.src = 'images/profile/myself.png';
 })
