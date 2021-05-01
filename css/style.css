@@ -84,7 +84,7 @@ a:hover {
 
 /*-----------------
  * Home
- *------------------*/
+ *-----------------*/
 
 .home-wrapper .picture img {
   width     : 100%;
@@ -219,7 +219,8 @@ a:hover {
 }
 
 .pub-wrapper abbr {
-  font-weight: bold;
+  color           : var(--cardinal);
+  text-decoration : none;
 }
 
 .pub-wrapper .authors {
