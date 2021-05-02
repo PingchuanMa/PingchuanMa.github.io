@@ -60,6 +60,12 @@ a:hover {
   text-decoration : underline;
 }
 
+abbr[title] {
+  text-decoration          : none;
+  text-decoration-skip-ink : auto;
+  transition               : color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+}
+
 .section-item {
   padding-top    : 20px;
   padding-bottom : 10px;
@@ -218,9 +224,14 @@ a:hover {
   color : black;
 }
 
-.pub-wrapper abbr {
-  color           : var(--cardinal);
+.pub-wrapper abbr[title] {
+  color           : var(--light-gray);
   text-decoration : none;
+}
+
+.pub-wrapper abbr[title]:hover {
+  color           : var(--dark-gray);
+  text-decoration : underline;
 }
 
 .pub-wrapper .authors {
