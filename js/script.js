@@ -19,7 +19,7 @@ profile.addEventListener("mouseenter", function() {
   counter = (counter + 1) % hoverImages.length;
 });
 profile.addEventListener("mouseleave", function() {
-  this.src = "images/profile/myself.png";
+  this.src = "images/profile/myself.webp";
 });
 
 var d = new Date();
