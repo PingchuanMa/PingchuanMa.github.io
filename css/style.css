@@ -71,12 +71,26 @@ abbr[title] {
   padding-bottom: 10px;
 }
 
+.section-head {
+  padding-top: 20px;
+}
+
 .section-title {
   font-family: var(--serif-font);
   font-weight: var(--serif-weight);
   font-size: 24px;
   display: inline-block;
-  padding-top: 20px;
+}
+
+.section-sub {
+  padding-left: 6px;
+  color: var(--light-gray);
+}
+
+@media (max-width: 575.98px) {
+  .section-sub {
+    padding-left: 0px;
+  }
 }
 
 .col-wrapper {
