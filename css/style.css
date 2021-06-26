@@ -111,6 +111,11 @@ abbr[title] {
   max-width: 200px;
 }
 
+.home-wrapper .picture .credit {
+  font-size: 14px;
+  color: var(--light-gray);
+}
+
 .home-wrapper .description {
   padding-top: 30px;
 }
