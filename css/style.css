@@ -116,6 +116,11 @@ abbr[title] {
   color: var(--light-gray);
 }
 
+.home-wrapper .picture .credit a {
+  font-size: 14px;
+  color: var(--light-gray);
+}
+
 .home-wrapper .description {
   padding-top: 30px;
 }
