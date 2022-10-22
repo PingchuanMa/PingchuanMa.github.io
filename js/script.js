@@ -30,7 +30,7 @@ profile_credit.addEventListener("mouseenter", function() {
 });
 profile_credit.addEventListener("mouseleave", function() {
   profile.src = "images/profile/myself.webp";
-  credit.innerText = "Photo by @QC";
+  credit.innerText = "@Vancouver, BC";
 });
 
 var d = new Date();
