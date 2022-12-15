@@ -14,8 +14,8 @@ var hoverImages = [
 ];
 var hoverCredits = [
   "Hello from <a title='CUDA' href='https://www.instagram.com/cudability/' target='_blank' rel='noopener noreferrer'>@CUDA</a>",
-  "Hello from <a title='Daimi' href='https://www.instagram.com/ragdolls_sophie_sofia/' target='_blank' rel='noopener noreferrer'>@Daimi</a> <a title='Toru' href='https://toruowo.github.io/' target='_blank' rel='noopener noreferrer'>(Toru)</a>",
-  "Hello from <a title='Shomi' href='https://www.instagram.com/ragdolls_sophie_sofia/' target='_blank' rel='noopener noreferrer'>@Shomi</a> <a title='Toru' href='https://toruowo.github.io/' target='_blank' rel='noopener noreferrer'>(Toru)</a>",
+  "Hello from <a title='Daimi' href='https://www.instagram.com/ragdolls_sophie_sofia/' target='_blank' rel='noopener noreferrer'>@Daimi</a>",
+  "Hello from <a title='Shomi' href='https://www.instagram.com/ragdolls_sophie_sofia/' target='_blank' rel='noopener noreferrer'>@Shomi</a>",
   "Hello from McFlurry",
 ];
 
