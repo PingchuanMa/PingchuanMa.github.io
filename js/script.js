@@ -23,15 +23,20 @@ var profile_credit = document.getElementById("profile-credit");
 var profile = document.getElementById("profile");
 var credit = document.getElementById("credit");
 
-profile_credit.addEventListener("mouseenter", function() {
+function profile_enter() {
   profile.src = hoverImages[counter];
   credit.innerHTML = hoverCredits[counter];
   counter = (counter + 1) % hoverImages.length;
-});
-profile_credit.addEventListener("mouseleave", function() {
+}
+
+function profile_leave() {
   profile.src = "images/profile/myself.webp";
-  credit.innerText = "@Vancouver, BC";
-});
+  credit.innerText = "Photo by Jiayuan Mao";
+}
+
+profile_credit.addEventListener("mouseenter", profile_enter);
+profile_credit.addEventListener("mouseleave", profile_leave);
+profile_leave();
 
 var d = new Date();
 document.getElementById('year').innerHTML = d.getFullYear();
