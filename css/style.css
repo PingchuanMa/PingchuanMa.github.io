@@ -6,27 +6,24 @@
 }
 
 @font-face {
-  font-family: "Linux Libertine";
-  src: url("../fonts/linux-libertine/LinLibertine_R.woff") format("woff");
-  font-weight: normal;
+  font-family: 'Lato';
+  src: url('../fonts/lato/Lato-Regular.woff2') format('woff2');
   font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
 }
 
 @font-face {
-  font-family: "Linux Libertine";
-  src: url("../fonts/linux-libertine/LinLibertine_RZ.woff") format("woff");
-  font-weight: 600;
+  font-family: 'Lato';
+  src: url('../fonts/lato/Lato-Bold.woff2') format('woff2');
   font-style: normal;
-}
-
-:root {
-  --serif-font: "Linux Libertine", "Linux Libertine O", "Palatino Linotype", Palatino, "DejaVu Serif", Georgia, serif;
-  --serif-weight: 600;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
 }
 
 body {
-  font-family: Tahoma, "Helvetica Neue", Ubuntu, Arial, PingFang, SimHei, sans-serif;
-  font-size: 16px;
+  font-family: "Lato", "Helvetica Neue", Ubuntu, Arial, PingFang, SimHei, sans-serif;
+  font-size: 14px;
   line-height: 1.8em;
   color: black;
   font-weight: normal;
@@ -35,7 +32,7 @@ body {
 
 body .container,
 body .container-fluid {
-  max-width: 1100px;
+  max-width: 900px;
 }
 
 body .row {
@@ -76,9 +73,8 @@ abbr[title] {
 }
 
 .section-title {
-  font-family: var(--serif-font);
-  font-weight: var(--serif-weight);
-  font-size: 24px;
+  font-weight: normal;
+  font-size: 20px;
   display: inline-block;
 }
 
@@ -126,9 +122,8 @@ abbr[title] {
 }
 
 .home-wrapper .description .name {
-  font-size: 36px;
+  font-size: 32px;
   font-weight: normal;
-  font-family: var(--serif-font);
 }
 
 @media (min-width: 576px) {
@@ -211,7 +206,7 @@ abbr[title] {
 }
 
 .name-wrapper .blockquote {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .name-wrapper .blockquote-footer {
@@ -239,9 +234,8 @@ abbr[title] {
 
 .pub-wrapper .title a {
   color: black;
-  font-weight: var(--serif-weight);
-  font-family: var(--serif-font);
-  font-size: 18px;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .pub-wrapper .title a:hover {
@@ -258,13 +252,29 @@ abbr[title] {
   text-decoration: underline;
 }
 
+.pub-wrapper .link .venue {
+  font-weight: bold;
+}
+
+.pub-wrapper .link a {
+  color: black;
+}
+
+.pub-wrapper .link a:hover {
+  color: black;
+}
+
+.pub-wrapper .highlight {
+  color: var(--cardinal);
+  font-weight: bold;
+}
+
 .pub-wrapper .authors {
   color: var(--light-gray);
 }
 
 .pub-wrapper .authors a {
   color: var(--light-gray);
-  text-decoration: underline;
 }
 
 .pub-wrapper .authors a:hover {
@@ -293,9 +303,8 @@ abbr[title] {
  *------------------*/
 
 .exp-wrapper .title a {
-  font-size: 18px;
-  font-weight: var(--serif-weight);
-  font-family: var(--serif-font);
+  font-size: 16px;
+  font-weight: normal;
 }
 
 .exp-wrapper a,
@@ -339,7 +348,7 @@ abbr[title] {
  *------------------*/
 
 footer {
-  font-size: 14px;
+  font-size: 12px;
   text-align: center;
   padding-bottom: 30px;
 }
