@@ -8,14 +8,10 @@ moreContent.addEventListener("shown.bs.collapse", function() {
 var counter = 0;
 var hoverImages = [
   "images/profile/cuda.webp",
-  "images/profile/daimi.webp",
-  "images/profile/shomi.webp",
   "images/profile/mcflurry.webp",
 ];
 // var hoverCredits = [
 //   "Hello from <a title='CUDA' href='https://www.instagram.com/cudability/' target='_blank' rel='noopener noreferrer'>@CUDA</a>",
-//   "Hello from <a title='Daimi' href='https://www.instagram.com/ragdolls_sophie_sofia/' target='_blank' rel='noopener noreferrer'>@Daimi</a>",
-//   "Hello from <a title='Shomi' href='https://www.instagram.com/ragdolls_sophie_sofia/' target='_blank' rel='noopener noreferrer'>@Shomi</a>",
 //   "Hello from McFlurry",
 // ];
 
