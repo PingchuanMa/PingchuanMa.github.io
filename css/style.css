@@ -124,6 +124,8 @@ abbr[title] {
 .home-wrapper .description .name {
   font-size: 32px;
   font-weight: normal;
+  line-height: 1.2em;
+  margin-bottom: 0.5rem;
 }
 
 @media (min-width: 576px) {
