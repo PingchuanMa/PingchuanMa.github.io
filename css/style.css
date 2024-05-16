@@ -156,7 +156,7 @@ abbr[title] {
   text-align: center;
   border-radius: 2px;
   border: 2px solid var(--very-light-gray);
-  line-height: 30px;
+  padding-top: 4%;
 }
 
 .home-wrapper .social-icon li a:hover {
