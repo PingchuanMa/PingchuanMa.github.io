@@ -31,6 +31,13 @@ body {
   background: white;
 }
 
+@media (max-width: 767.98px) {
+  body {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
 body .container,
 body .container-fluid {
   max-width: 768px;
@@ -72,6 +79,12 @@ a:hover {
   display: inline-block;
 }
 
+@media (max-width: 767.98px) {
+  .section-title {
+    font-size: 24px;
+  }
+}
+
 .section-sub {
   padding-left: 0;
   color: var(--dark-gray);
@@ -103,34 +116,22 @@ a:hover {
 
 .home-wrapper .picture img {
   width: 100%;
-  max-width: 240px;
-}
-
-.home-wrapper .picture .credit {
-  font-size: 14px;
-  color: var(--light-gray);
-}
-
-.home-wrapper .picture .credit a {
-  font-size: 14px;
-  color: var(--light-gray);
+  max-width: 200px;
 }
 
 .home-wrapper .description {
-  padding-top: 30px;
+  margin-top: 30px;
 }
 
 .home-wrapper .description .name {
   font-size: 32px;
-  font-weight: normal;
-  line-height: 1.2em;
-  margin-bottom: 0.5rem;
+  margin-bottom: 20px;
 }
 
 @media (min-width: 576px) {
   .home-wrapper .description {
-    padding-top: 0;
-    padding-left: calc(20px + 5%);
+    margin-top: 0;
+    margin-left: calc(20px + 5%);
   }
 }
 
@@ -150,8 +151,8 @@ a:hover {
   display: block;
   color: black;
   font-size: 16px;
-  width: 30px;
-  height: 30px;
+  line-height: 23px;
+  padding: 1px 5px;
   text-align: center;
   border-radius: 2px;
   border: 2px solid var(--very-light-gray);
@@ -178,7 +179,6 @@ a:hover {
 }
 
 .bio-wrapper .name-icon {
-  font-size: 14px;
   margin-left: -4px;
   margin-right: -4px;
 }
@@ -194,13 +194,8 @@ a:hover {
   border-bottom: 1.5px dashed currentColor;
 }
 
-.name-wrapper .blockquote {
-  font-size: 14px;
-}
-
 .name-wrapper .blockquote-footer {
   margin-top: 0px;
-  font-size: 14px;
   padding-bottom: 0px;
 }
 
@@ -230,7 +225,6 @@ a:hover {
 .pub-wrapper .title a {
   color: black;
   font-weight: bold;
-  font-size: 16px;
 }
 
 .pub-wrapper .title a:hover {
@@ -307,6 +301,7 @@ a:hover {
   background-color: white;
   border: 2px solid var(--light-gray);
   border-radius: 2px;
+  line-height: 21px;
 }
 
 .snippet .btn:hover {
@@ -331,21 +326,12 @@ a:hover {
  *------------------*/
 
 .exp-wrapper .title a {
-  font-size: 16px;
   font-weight: bold;
 }
 
 .exp-wrapper a,
 .exp-wrapper a:hover {
   color: black;
-}
-
-.exp-wrapper .info {
-  line-height: 20px;
-}
-
-.exp-wrapper .time {
-  font-size: 14px;
 }
 
 .exp-wrapper .time fix {
