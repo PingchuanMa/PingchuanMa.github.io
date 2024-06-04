@@ -103,7 +103,7 @@ a:hover {
 
 .home-wrapper .picture img {
   width: 100%;
-  max-width: 220px;
+  max-width: 240px;
 }
 
 .home-wrapper .picture .credit {
@@ -289,6 +289,11 @@ a:hover {
   line-height: 16px;
   margin-top: 10px;
   margin-bottom: 0;
+  border-radius: 2px;
+}
+
+.representative .snippet {
+  background: white;
 }
 
 .snippet .btn {
@@ -372,7 +377,7 @@ a:hover {
 
 footer {
   font-size: 12px;
-  margin-top: 30px;
+  margin-top: 40px;
   margin-bottom: 30px;
 }
 
