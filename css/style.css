@@ -136,31 +136,10 @@ a:hover {
   }
 }
 
-.home-wrapper .social-icon {
-  margin-top: 15px;
+.home-wrapper .social {
+  margin-top: 10px;
   margin-bottom: 0;
   padding: 0;
-  display: block;
-}
-
-.home-wrapper .social-icon li {
-  display: inline-block;
-  margin: 0 2px;
-}
-
-.home-wrapper .social-icon li a {
-  display: block;
-  color: black;
-  font-size: 16px;
-  line-height: 23px;
-  padding: 0.5px 4px;
-  text-align: center;
-  border-radius: 2px;
-  border: 2px solid var(--very-light-gray);
-}
-
-.home-wrapper .social-icon li a:hover {
-  border-color: var(--light-gray);
 }
 
 /*------------------
