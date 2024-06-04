@@ -2,8 +2,8 @@
 
 var moreContent = document.getElementById("more-content");
 moreContent.addEventListener("shown.bs.collapse", function() {
-  let trigger = document.getElementById("more-trigger");
-  trigger.style.visibility = "hidden";
+  // let trigger = document.getElementById("more-trigger");
+  // trigger.style.visibility = "hidden";
   this.scrollIntoView();
 });
 
