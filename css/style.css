@@ -152,11 +152,10 @@ a:hover {
   color: black;
   font-size: 16px;
   line-height: 23px;
-  padding: 1px 5px;
+  padding: 0.5px 4px;
   text-align: center;
   border-radius: 2px;
   border: 2px solid var(--very-light-gray);
-  padding-top: 4%;
 }
 
 .home-wrapper .social-icon li a:hover {
@@ -293,7 +292,7 @@ a:hover {
 .snippet .btn {
   transition: opacity 0.1s ease-in-out, border-color 0.1s ease-in-out;
   opacity: 0.9;
-  padding: 1px 5px;
+  padding: 0.5px 4px;
   position: absolute;
   right: 4px;
   top: 4px;
