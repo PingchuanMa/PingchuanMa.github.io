@@ -47,15 +47,6 @@ var snippets = document.querySelectorAll('.snippet');
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
-tooltipTriggerList.forEach(button => {
-  button.addEventListener('mouseleave', function() {
-    this.querySelector('i').className = 'bi bi-clipboard';
-    var tooltip = bootstrap.Tooltip.getInstance(this);
-    tooltip.setContent({'.tooltip-inner': 'Copy to clipboard'});
-    tooltip.hide();
-  });
-});
-
 var clipboardSnippets = new ClipboardJS('[data-clipboard-snippet]', {
   target: function(trigger) {
     return trigger.nextElementSibling;
@@ -64,7 +55,14 @@ var clipboardSnippets = new ClipboardJS('[data-clipboard-snippet]', {
 
 clipboardSnippets.on('success', function(e) {
   e.clearSelection();
-  e.trigger.querySelector('i').className = 'bi bi-clipboard-check';
+  var icon = e.trigger.querySelector('i');
+  icon.className = 'bi bi-check2';
   var tooltip = bootstrap.Tooltip.getInstance(e.trigger);
   tooltip.setContent({'.tooltip-inner': 'Copied!'});
+  tooltip.show();
+  setTimeout(function() {
+    icon.className = 'bi bi-clipboard';
+    tooltip.setContent({'.tooltip-inner': 'Copy to clipboard'});
+    tooltip.hide();
+  }, 2000);
 });
