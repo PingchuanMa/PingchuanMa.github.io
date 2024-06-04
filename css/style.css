@@ -1,8 +1,9 @@
 :root {
   --cardinal: #750014;
+  --very-light-orange: #fdf3ea;
   --very-light-gray: #f1f1f1;
   --light-gray: #c2c0bf;
-  --dark-gray: #8b959e;
+  --dark-gray: #8a8b8c;
 }
 
 @font-face {
@@ -24,7 +25,7 @@
 body {
   font-family: "Lato", "Helvetica Neue", Ubuntu, Arial, PingFang, SimHei, sans-serif;
   font-size: 14px;
-  line-height: 1.8em;
+  line-height: 24px;
   color: black;
   font-weight: normal;
   background: white;
@@ -58,12 +59,11 @@ a:hover {
 }
 
 .section-item {
-  padding-top: 20px;
-  padding-bottom: 10px;
+  margin-top: 20px;
 }
 
 .section-head {
-  padding-top: 20px;
+  margin-top: 20px;
 }
 
 .section-title {
@@ -73,23 +73,28 @@ a:hover {
 }
 
 .section-sub {
-  padding-left: 6px;
+  padding-left: 0;
   color: var(--dark-gray);
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   .section-sub {
-    padding-left: 0px;
+    padding-left: 10px;
   }
 }
 
 .col-wrapper {
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .sec-wrapper {
-  margin-top: 20px;
+  margin-top: 30px;
+}
+
+.representative {
+  background-color: var(--very-light-orange);
+  border-radius: 2px;
 }
 
 /*-----------------
@@ -157,18 +162,6 @@ a:hover {
   border-color: var(--light-gray);
 }
 
-.home-wrapper .interests {
-  padding-top: 20px;
-  margin-bottom: -20px;
-}
-
-@media (min-width: 992px) {
-  .home-wrapper .interests {
-    padding-top: 0;
-    margin-bottom: 0;
-  }
-}
-
 /*------------------
  * Bio
  *------------------*/
@@ -228,6 +221,12 @@ a:hover {
  * Publications
  *------------------*/
 
+.pub-wrapper .section-item {
+  margin-top: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .pub-wrapper .title a {
   color: black;
   font-weight: bold;
@@ -269,10 +268,14 @@ a:hover {
 }
 
 .pub-wrapper .figure img {
-  margin: auto;
-  padding: 10px 20px 10px 0;
   max-width: 240px;
   width: 100%;
+}
+
+@media (max-width: 767.98px) {
+  .pub-wrapper .figure {
+    margin-bottom: 10px;
+  }
 }
 
 /*------------------
@@ -284,6 +287,8 @@ a:hover {
   background: var(--very-light-gray);
   font-size: 12px;
   line-height: 16px;
+  margin-top: 10px;
+  margin-bottom: 0;
 }
 
 .snippet .btn {
@@ -367,8 +372,8 @@ a:hover {
 
 footer {
   font-size: 12px;
-  padding-top: 20px;
-  padding-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 footer .text-muted {
