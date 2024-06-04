@@ -6,9 +6,10 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+
   <meta name="description" content="Pingchuan Ma is a Ph.D. candidate in computer science at MIT CSAIL.">
   <meta name="author" content="Pingchuan Ma">
-  <meta name="keywords" content="Pingchuan Ma,Pingchuan,Ma,Computer,Graphics,Vision,Deep,Machine,Learning,Robotics,MIT,CSAIL">
+  <meta name="keywords" content="Pingchuan Ma,Pingchuan,Ma,Computer,Graphics,Vision,Deep,Machine,Learning,Physics,Robotics,MIT,CSAIL">
 
   <title>Pingchuan Ma</title>
 
@@ -29,6 +30,9 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+  <!-- clipboard.js -->
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
 
   <!-- Google Analytics -->
   <script>
@@ -56,7 +60,7 @@
       <div class="row align-items-center">
         <div class="col-sm-auto col-wrapper">
           <div id="profile-credit" class="picture">
-            <img id="profile" src="images/profile/myself.webp" class="img-responsive" alt="[Pingchuan :)]"/>
+            <img id="profile" src="assets/profile/myself.webp" class="img-responsive" alt="[Pingchuan :)]"/>
             <!-- <div id="credit" class="credit">Photo by Lijie Chen</div> -->
           </div>
         </div>
@@ -72,6 +76,7 @@
               <li><a title="GitHub" href="https://github.com/PingchuanMa" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></i></a></li>
               <li><a title="Twitter" href="https://twitter.com/pika7ma" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter"></i></i></a></li>
               <li><a title="Instagram" href="https://www.instagram.com/pika7ma/" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></i></a></li>
+              <li><a title="CV" href="assets/profile/Curriculum_Vitae.pdf" target="_blank" rel="noopener noreferrer"><i class="ai ai-cv"></i></i></a></li>
             </ul>
           </div>
         </div>
@@ -83,7 +88,7 @@
       <div class="row section-head">
         <div class="col col-wrapper">
           <div class="section-title">Biography</div>
-          <a data-bs-toggle="collapse" href="#moreContent" id="moreTrigger" title="Load More">
+          <a data-bs-toggle="collapse" href="#more-content" id="more-trigger" title="Load More">
             [more]
           </a>
         </div>
@@ -91,7 +96,7 @@
       <div class="row">
         <div class="col col-wrapper section-item">
           Pingchuan Ma
-          <a class="info" data-bs-toggle="collapse" href="#nameContent" id="nameTrigger" title="Learn my name" onclick="return false">
+          <a class="info" data-bs-toggle="collapse" href="#name-content" id="name-trigger" title="Learn my name" onclick="return false">
             (<span class="zh-name">馬平川</span><sup class="name-icon"><i class="bi bi-info"></i></sup>)
           </a>
           is a fifth-year Ph.D. candidate at <a href="https://www.csail.mit.edu/" target="_blank" rel="noopener noreferrer">MIT CSAIL</a>
@@ -107,7 +112,7 @@
     </div>
 
     <!-- Name -->
-    <div class="collapse" id="nameContent">
+    <div class="collapse" id="name-content">
       <div class="sec-wrapper name-wrapper" id="name">
         <div class="row section-head">
           <div class="col col-wrapper">
@@ -199,7 +204,7 @@
     <div class="sec-wrapper pub-wrapper" id="pub">
       <div class="row section-head">
         <div class="col-sm-auto col-wrapper">
-          <div class="section-title">Publications</div>
+          <div class="section-title">Research</div>
         </div>
         <div class="col-sm section-sub">
           [* indicates equal contribution]
@@ -211,7 +216,7 @@
         <div class="col-xs-12 col-md-auto col-wrapper">
           <div class="figure">
             <a href="https://arxiv.org/abs/2405.09783" target="_blank" rel="noopener noreferrer">
-              <img src="images/sga/teaser.webp" alt="[SGA]">
+              <img src="assets/sga/teaser.webp" alt="[SGA]">
             </a>
           </div>
         </div>
@@ -233,21 +238,38 @@
             <a href="https://cdfg.mit.edu/wojciech" target="_blank" rel="noopener noreferrer">Wojciech Matusik</a>
           </div>
           <div class="link">
-            <span class="venue"><a href="https://icml.cc/Conferences/2024" target="_blank" rel="noopener noreferrer">[ICML 2024]</a></span>
-            <a href="https://arxiv.org/abs/2405.09783" target="_blank" rel="noopener noreferrer">[Homepage]</a>
-            <a href="https://arxiv.org/abs/2405.09783" target="_blank" rel="noopener noreferrer">[Paper]</a>
-            <a href="https://github.com/PingchuanMa/SGA" target="_blank" rel="noopener noreferrer">[Code]</a>
+            <span class="venue"><a href="https://icml.cc/Conferences/2024" target="_blank" rel="noopener noreferrer">ICML 2024</a></span> /
+            <a href="https://arxiv.org/abs/2405.09783" target="_blank" rel="noopener noreferrer">Homepage</a> /
+            <a href="https://arxiv.org/abs/2405.09783" target="_blank" rel="noopener noreferrer">Paper</a> /
+            <a href="https://github.com/PingchuanMa/SGA" target="_blank" rel="noopener noreferrer">Code</a> /
+            <a data-bs-toggle="collapse" href="#bibtex-sga" onclick="return false">bibtex</a>
           </div>
         </div>
       </div>
       <!-- end -->
+
+      <!-- bibtex -->
+      <div class="collapse" id="bibtex-sga">
+        <div class="row align-items-center section-item">
+          <div class="col col-wrapper">
+            <pre class="snippet">
+<code>@inproceedings{ma2024llm,
+  title={LLM and Simulation as Bilevel Optimizers: A New Paradigm to Advance Physical Scientific Discovery},
+  author={Ma, Pingchuan and Wang, Tsun-Hsuan and Guo, Minghao and Sun, Zhiqing and Tenenbaum, Joshua B and Rus, Daniela and Gan, Chuang and Matusik, Wojciech},
+  booktitle={International Conference on Machine Learning},
+  year={2024},
+  organization={PMLR}
+}</code></pre>
+          </div>
+        </div>
+      </div>
 
       <!-- begin -->
       <div class="row align-items-center section-item">
         <div class="col-xs-12 col-md-auto col-wrapper">
           <div class="figure">
             <a href="https://diffusebot.github.io/" target="_blank" rel="noopener noreferrer">
-              <img src="images/diffusebot/teaser.webp" alt="[DiffuseBot]">
+              <img src="assets/diffusebot/teaser.webp" alt="[DiffuseBot]">
             </a>
           </div>
         </div>
@@ -270,22 +292,39 @@
             <a href="http://danielarus.csail.mit.edu/" target="_blank" rel="noopener noreferrer">Daniela Rus</a>
           </div>
           <div class="link">
-            <span class="venue"><a href="https://nips.cc/Conferences/2023" target="_blank" rel="noopener noreferrer">[NeurIPS 2023]</a></span>
-            <a href="https://diffusebot.github.io/" target="_blank" rel="noopener noreferrer">[Homepage]</a>
-            <a href="https://arxiv.org/abs/2311.17053" target="_blank" rel="noopener noreferrer">[Paper]</a>
-            <a href="https://youtu.be/0a5fZLneMSg" target="_blank" rel="noopener noreferrer">[Video]</a>
+            <span class="venue"><a href="https://nips.cc/Conferences/2023" target="_blank" rel="noopener noreferrer">NeurIPS 2023</a></span> /
+            <a href="https://diffusebot.github.io/" target="_blank" rel="noopener noreferrer">Homepage</a> /
+            <a href="https://arxiv.org/abs/2311.17053" target="_blank" rel="noopener noreferrer">Paper</a> /
+            <a href="https://youtu.be/0a5fZLneMSg" target="_blank" rel="noopener noreferrer">Video</a> /
+            <a data-bs-toggle="collapse" href="#bibtex-diffusebot" onclick="return false">bibtex</a>
           </div>
           <div class="highlight">Oral Presentation</div>
         </div>
       </div>
       <!-- end -->
 
+      <!-- bibtex -->
+      <div class="collapse" id="bibtex-diffusebot">
+        <div class="row align-items-center section-item">
+          <div class="col col-wrapper">
+            <pre class="snippet">
+<code>@article{wang2024diffusebot,
+  title={{DiffuseBot}: Breeding Soft Robots With Physics-Augmented Generative Diffusion Models},
+  author={Wang, Tsun-Hsuan Johnson and Zheng, Juntian and Ma, Pingchuan and Du, Yilun and Kim, Byungchul and Spielberg, Andrew and Tenenbaum, Josh and Gan, Chuang and Rus, Daniela},
+  journal={Advances in Neural Information Processing Systems},
+  volume={36},
+  year={2024}
+}</code></pre>
+          </div>
+        </div>
+      </div>
+
       <!-- begin -->
       <div class="row align-items-center section-item">
         <div class="col-xs-12 col-md-auto col-wrapper">
           <div class="figure">
             <a href="https://sites.google.com/view/nclaw" target="_blank" rel="noopener noreferrer">
-              <img src="images/nclaw/teaser.webp" alt="[NCLaw]">
+              <img src="assets/nclaw/teaser.webp" alt="[NCLaw]">
             </a>
           </div>
         </div>
@@ -306,21 +345,39 @@
             <a href="https://cdfg.mit.edu/wojciech" target="_blank" rel="noopener noreferrer">Wojciech Matusik</a>
           </div>
           <div class="link">
-            <span class="venue"><a href="https://icml.cc/Conferences/2023" target="_blank" rel="noopener noreferrer">[ICML 2023]</a></span>
-            <a href="https://sites.google.com/view/nclaw" target="_blank" rel="noopener noreferrer">[Homepage]</a>
-            <a href="https://arxiv.org/abs/2304.14369" target="_blank" rel="noopener noreferrer">[Paper]</a>
-            <a href="https://github.com/PingchuanMa/NCLaw" target="_blank" rel="noopener noreferrer">[Code]</a>
+            <span class="venue"><a href="https://icml.cc/Conferences/2023" target="_blank" rel="noopener noreferrer">ICML 2023</a></span> /
+            <a href="https://sites.google.com/view/nclaw" target="_blank" rel="noopener noreferrer">Homepage</a> /
+            <a href="https://arxiv.org/abs/2304.14369" target="_blank" rel="noopener noreferrer">Paper</a> /
+            <a href="https://github.com/PingchuanMa/NCLaw" target="_blank" rel="noopener noreferrer">Code</a> /
+            <a data-bs-toggle="collapse" href="#bibtex-nclaw" onclick="return false">bibtex</a>
           </div>
         </div>
       </div>
       <!-- end -->
+
+      <!-- bibtex -->
+      <div class="collapse" id="bibtex-nclaw">
+        <div class="row align-items-center section-item">
+          <div class="col col-wrapper">
+            <pre class="snippet">
+<code>@inproceedings{ma2023learning,
+  title={Learning Neural Constitutive Laws from Motion Observations for Generalizable PDE Dynamics},
+  author={Ma, Pingchuan and Chen, Peter Yichen and Deng, Bolei and Tenenbaum, Joshua B and Du, Tao and Gan, Chuang and Matusik, Wojciech},
+  booktitle={International Conference on Machine Learning},
+  pages={23279--23300},
+  year={2023},
+  organization={PMLR}
+}</code></pre>
+          </div>
+        </div>
+      </div>
 
       <!-- begin -->
       <div class="row align-items-center section-item">
         <div class="col-xs-12 col-md-auto col-wrapper">
           <div class="figure">
             <a href="https://sites.google.com/view/softzoo-iclr-2023" target="_blank" rel="noopener noreferrer">
-              <img src="images/softzoo/teaser.webp" alt="[SoftZoo]">
+              <img src="assets/softzoo/teaser.webp" alt="[SoftZoo]">
             </a>
           </div>
         </div>
@@ -342,21 +399,37 @@
             <a href="https://people.csail.mit.edu/ganchuang/" target="_blank" rel="noopener noreferrer">Chuang Gan</a>
           </div>
           <div class="link">
-            <span class="venue"><a href="https://iclr.cc/Conferences/2023" target="_blank" rel="noopener noreferrer">[ICLR 2023]</a></span>
-            <a href="https://sites.google.com/view/softzoo-iclr-2023" target="_blank" rel="noopener noreferrer">[Homepage]</a>
-            <a href="https://arxiv.org/abs/2303.09555" target="_blank" rel="noopener noreferrer">[Paper]</a>
-            <a href="https://github.com/zswang666/softzoo" target="_blank" rel="noopener noreferrer">[Code]</a>
+            <span class="venue"><a href="https://iclr.cc/Conferences/2023" target="_blank" rel="noopener noreferrer">ICLR 2023</a></span> /
+            <a href="https://sites.google.com/view/softzoo-iclr-2023" target="_blank" rel="noopener noreferrer">Homepage</a> /
+            <a href="https://arxiv.org/abs/2303.09555" target="_blank" rel="noopener noreferrer">Paper</a> /
+            <a href="https://github.com/zswang666/softzoo" target="_blank" rel="noopener noreferrer">Code</a> /
+            <a data-bs-toggle="collapse" href="#bibtex-softzoo" onclick="return false">bibtex</a>
           </div>
         </div>
       </div>
       <!-- end -->
+
+      <!-- bibtex -->
+      <div class="collapse" id="bibtex-softzoo">
+        <div class="row align-items-center section-item">
+          <div class="col col-wrapper">
+            <pre class="snippet">
+<code>@inproceedings{wang2022softzoo,
+  title={{SoftZoo}: A Soft Robot Co-design Benchmark for Locomotion in Diverse Environments},
+  author={Wang, Tsun-Hsuan and Ma, Pingchuan and Spielberg, Andrew Everett and Xian, Zhou and Zhang, Hao and Tenenbaum, Joshua B and Rus, Daniela and Gan, Chuang},
+  booktitle={The Eleventh International Conference on Learning Representations},
+  year={2022}
+}</code></pre>
+          </div>
+        </div>
+      </div>
 
       <!-- begin -->
       <div class="row align-items-center section-item">
         <div class="col-xs-12 col-md-auto col-wrapper">
           <div class="figure">
             <a href="http://risp.csail.mit.edu/" target="_blank" rel="noopener noreferrer">
-              <img src="images/risp/teaser.webp" alt="[RISP]">
+              <img src="assets/risp/teaser.webp" alt="[RISP]">
             </a>
           </div>
         </div>
@@ -375,23 +448,39 @@
             <a href="https://people.csail.mit.edu/ganchuang/" target="_blank" rel="noopener noreferrer">Chuang Gan</a>
           </div>
           <div class="link">
-            <span class="venue"><a href="https://iclr.cc/Conferences/2022" target="_blank" rel="noopener noreferrer">[ICLR 2022]</a></span>
-            <a href="http://risp.csail.mit.edu/" target="_blank" rel="noopener noreferrer">[Homepage]</a>
-            <a href="https://arxiv.org/abs/2205.05678" target="_blank" rel="noopener noreferrer">[Paper]</a>
-            <a href="https://sites.google.com/view/risp-iclr-2022" target="_blank" rel="noopener noreferrer">[Demo]</a>
-            <a href="https://news.mit.edu/2022/one-motion-capture-neural-network-0429" target="_blank" rel="noopener noreferrer">[MIT News]</a>
+            <span class="venue"><a href="https://iclr.cc/Conferences/2022" target="_blank" rel="noopener noreferrer">ICLR 2022</a></span> /
+            <a href="http://risp.csail.mit.edu/" target="_blank" rel="noopener noreferrer">Homepage</a> /
+            <a href="https://arxiv.org/abs/2205.05678" target="_blank" rel="noopener noreferrer">Paper</a> /
+            <a href="https://sites.google.com/view/risp-iclr-2022" target="_blank" rel="noopener noreferrer">Demo</a> /
+            <a href="https://news.mit.edu/2022/one-motion-capture-neural-network-0429" target="_blank" rel="noopener noreferrer">MIT News</a> /
+            <a data-bs-toggle="collapse" href="#bibtex-risp" onclick="return false">bibtex</a>
           </div>
           <div class="highlight">Oral Presentation</div>
         </div>
       </div>
       <!-- end -->
 
+      <!-- bibtex -->
+      <div class="collapse" id="bibtex-risp">
+        <div class="row align-items-center section-item">
+          <div class="col col-wrapper">
+            <pre class="snippet">
+<code>@inproceedings{ma2021risp,
+  title={{RISP}: Rendering-Invariant State Predictor with Differentiable Simulation and Rendering for Cross-Domain Parameter Estimation},
+  author={Ma, Pingchuan and Du, Tao and Tenenbaum, Joshua B and Matusik, Wojciech and Gan, Chuang},
+  booktitle={International Conference on Learning Representations},
+  year={2021}
+}</code></pre>
+          </div>
+        </div>
+      </div>
+
       <!-- begin -->
       <div class="row align-items-center section-item">
         <div class="col-xs-12 col-md-auto col-wrapper">
           <div class="figure">
             <a href="http://diffpd.csail.mit.edu/" target="_blank" rel="noopener noreferrer">
-              <img src="images/diffpd/teaser.webp" alt="[DiffPD]">
+              <img src="assets/diffpd/teaser.webp" alt="[DiffPD]">
             </a>
           </div>
         </div>
@@ -411,23 +500,43 @@
             <a href="https://cdfg.mit.edu/wojciech" target="_blank" rel="noopener noreferrer">Wojciech Matusik</a>
           </div>
           <div class="link">
-            <span class="venue"><a href="https://s2022.siggraph.org/" target="_blank" rel="noopener noreferrer">[SIGGRAPH 2022]</a></span>
-            <a href="http://diffpd.csail.mit.edu/" target="_blank" rel="noopener noreferrer">[Homepage]</a>
-            <a href="https://arxiv.org/abs/2101.05917" target="_blank" rel="noopener noreferrer">[Paper]</a>
-            <a href="https://github.com/mit-gfx/diff_pd_public" target="_blank" rel="noopener noreferrer">[Code]</a>
-            <a href="https://youtu.be/DdNHmkzdWZE" target="_blank" rel="noopener noreferrer">[Video]</a>
-            <a href="http://diffpd.csail.mit.edu/slides.pdf" target="_blank" rel="noopener noreferrer">[Slides]</a>
+            <span class="venue"><a href="https://s2022.siggraph.org/" target="_blank" rel="noopener noreferrer">SIGGRAPH 2022</a></span> /
+            <a href="http://diffpd.csail.mit.edu/" target="_blank" rel="noopener noreferrer">Homepage</a> /
+            <a href="https://arxiv.org/abs/2101.05917" target="_blank" rel="noopener noreferrer">Paper</a> /
+            <a href="https://github.com/mit-gfx/diff_pd_public" target="_blank" rel="noopener noreferrer">Code</a> /
+            <a href="https://youtu.be/DdNHmkzdWZE" target="_blank" rel="noopener noreferrer">Video</a> /
+            <a href="http://diffpd.csail.mit.edu/slides.pdf" target="_blank" rel="noopener noreferrer">Slides</a> /
+            <a data-bs-toggle="collapse" href="#bibtex-diffpd" onclick="return false">bibtex</a>
           </div>
         </div>
       </div>
       <!-- end -->
+
+      <!-- bibtex -->
+      <div class="collapse" id="bibtex-diffpd">
+        <div class="row align-items-center section-item">
+          <div class="col col-wrapper">
+            <pre class="snippet">
+<code>@article{du2021diffpd,
+  title={{DiffPD}: Differentiable Projective Dynamics},
+  author={Du, Tao and Wu, Kui and Ma, Pingchuan and Wah, Sebastien and Spielberg, Andrew and Rus, Daniela and Matusik, Wojciech},
+  journal={ACM Transactions on Graphics (TOG)},
+  volume={41},
+  number={2},
+  pages={1--21},
+  year={2021},
+  publisher={ACM New York, NY}
+}</code></pre>
+          </div>
+        </div>
+      </div>
 
       <!-- begin -->
       <div class="row align-items-center section-item">
         <div class="col-xs-12 col-md-auto col-wrapper">
           <div class="figure">
             <a href="http://diffaqua.csail.mit.edu/" target="_blank" rel="noopener noreferrer">
-              <img src="images/diffaqua/teaser.webp" alt="[DiffAqua]">
+              <img src="assets/diffaqua/teaser.webp" alt="[DiffAqua]">
             </a>
           </div>
         </div>
@@ -448,22 +557,42 @@
             <a href="https://cdfg.mit.edu/wojciech" target="_blank" rel="noopener noreferrer">Wojciech Matusik</a>
           </div>
           <div class="link">
-            <span class="venue"><a href="https://s2021.siggraph.org/" target="_blank" rel="noopener noreferrer">[SIGGRAPH 2021]</a></span>
-            <a href="http://diffaqua.csail.mit.edu/" target="_blank" rel="noopener noreferrer">[Homepage]</a>
-            <a href="https://arxiv.org/abs/2104.00837" target="_blank" rel="noopener noreferrer">[Paper]</a>
-            <a href="https://github.com/mit-gfx/DiffAqua" target="_blank" rel="noopener noreferrer">[Code]</a>
-            <a href="https://youtu.be/fVUfXIJEQDg" target="_blank" rel="noopener noreferrer">[Video]</a>
+            <span class="venue"><a href="https://s2021.siggraph.org/" target="_blank" rel="noopener noreferrer">SIGGRAPH 2021</a></span> /
+            <a href="http://diffaqua.csail.mit.edu/" target="_blank" rel="noopener noreferrer">Homepage</a> /
+            <a href="https://arxiv.org/abs/2104.00837" target="_blank" rel="noopener noreferrer">Paper</a> /
+            <a href="https://github.com/mit-gfx/DiffAqua" target="_blank" rel="noopener noreferrer">Code</a> /
+            <a href="https://youtu.be/fVUfXIJEQDg" target="_blank" rel="noopener noreferrer">Video</a> /
+            <a data-bs-toggle="collapse" href="#bibtex-diffaqua" onclick="return false">bibtex</a>
           </div>
         </div>
       </div>
       <!-- end -->
+
+      <!-- bibtex -->
+      <div class="collapse" id="bibtex-diffaqua">
+        <div class="row align-items-center section-item">
+          <div class="col col-wrapper">
+            <pre class="snippet">
+<code>@article{ma2021diffaqua,
+  title={{DiffAqua}: A Differentiable Computational Design Pipeline for Soft Underwater Swimmers with Shape Interpolation},
+  author={Ma, Pingchuan and Du, Tao and Zhang, John Z and Wu, Kui and Spielberg, Andrew and Katzschmann, Robert K and Matusik, Wojciech},
+  journal={ACM Transactions on Graphics (TOG)},
+  volume={40},
+  number={4},
+  pages={1--14},
+  year={2021},
+  publisher={ACM New York, NY, USA}
+}</code></pre>
+          </div>
+        </div>
+      </div>
 
       <!-- begin -->
       <div class="row align-items-center section-item">
         <div class="col-xs-12 col-md-auto col-wrapper">
           <div class="figure">
             <a href="http://cpmtl.csail.mit.edu/" target="_blank" rel="noopener noreferrer">
-              <img src="images/cpmtl/teaser.webp" alt="[CPMTL]">
+              <img src="assets/cpmtl/teaser.webp" alt="[CPMTL]">
             </a>
           </div>
         </div>
@@ -480,23 +609,41 @@
             <a href="https://cdfg.mit.edu/wojciech" target="_blank" rel="noopener noreferrer">Wojciech Matusik</a>
           </div>
           <div class="link">
-            <span class="venue"><a href="https://icml.cc/Conferences/2020" target="_blank" rel="noopener noreferrer">[ICML 2020]</a></span>
-            <a href="http://cpmtl.csail.mit.edu/" target="_blank" rel="noopener noreferrer">[Homepage]</a>
-            <a href="https://arxiv.org/abs/2006.16434" target="_blank" rel="noopener noreferrer">[Paper]</a>
-            <a href="https://github.com/mit-gfx/ContinuousParetoMTL" target="_blank" rel="noopener noreferrer">[Code]</a>
-            <a href="https://icml.cc/virtual/2020/poster/5856" target="_blank" rel="noopener noreferrer">[Talk]</a>
-            <a href="http://cpmtl.csail.mit.edu/data/slides.pdf" target="_blank" rel="noopener noreferrer">[Slides]</a>
+            <span class="venue"><a href="https://icml.cc/Conferences/2020" target="_blank" rel="noopener noreferrer">ICML 2020</a></span> /
+            <a href="http://cpmtl.csail.mit.edu/" target="_blank" rel="noopener noreferrer">Homepage</a> /
+            <a href="https://arxiv.org/abs/2006.16434" target="_blank" rel="noopener noreferrer">Paper</a> /
+            <a href="https://github.com/mit-gfx/ContinuousParetoMTL" target="_blank" rel="noopener noreferrer">Code</a> /
+            <a href="https://icml.cc/virtual/2020/poster/5856" target="_blank" rel="noopener noreferrer">Talk</a> /
+            <a href="http://cpmtl.csail.mit.edu/data/slides.pdf" target="_blank" rel="noopener noreferrer">Slides</a> /
+            <a data-bs-toggle="collapse" href="#bibtex-cpmtl" onclick="return false">bibtex</a>
           </div>
         </div>
       </div>
       <!-- end -->
+
+      <!-- bibtex -->
+      <div class="collapse" id="bibtex-cpmtl">
+        <div class="row align-items-center section-item">
+          <div class="col col-wrapper">
+            <pre class="snippet">
+<code>@inproceedings{ma2020efficient,
+  title={Efficient Continuous Pareto Exploration in Multi-Task Learning},
+  author={Ma, Pingchuan and Du, Tao and Matusik, Wojciech},
+  booktitle={International Conference on Machine Learning},
+  pages={6522--6531},
+  year={2020},
+  organization={PMLR}
+}</code></pre>
+          </div>
+        </div>
+      </div>
 
       <!-- begin -->
       <div class="row align-items-center section-item">
         <div class="col-xs-12 col-md-auto col-wrapper">
           <div class="figure">
             <a href="http://people.csail.mit.edu/jiex/papers/PGMORL/" target="_blank" rel="noopener noreferrer">
-              <img src="images/pgmorl/teaser.webp" alt="[PGMORL]">
+              <img src="assets/pgmorl/teaser.webp" alt="[PGMORL]">
             </a>
           </div>
         </div>
@@ -516,22 +663,86 @@
             <a href="https://cdfg.mit.edu/wojciech" target="_blank" rel="noopener noreferrer">Wojciech Matusik</a>
           </div>
           <div class="link">
-            <span class="venue"><a href="https://icml.cc/Conferences/2020" target="_blank" rel="noopener noreferrer">[ICML 2020]</a></span>
-            <a href="http://people.csail.mit.edu/jiex/papers/PGMORL/" target="_blank" rel="noopener noreferrer">[Homepage]</a>
-            <a href="https://people.csail.mit.edu/jiex/papers/PGMORL/paper.pdf" target="_blank" rel="noopener noreferrer">[Paper]</a>
-            <a href="https://github.com/mit-gfx/PGMORL" target="_blank" rel="noopener noreferrer">[Code]</a>
-            <a href="https://people.csail.mit.edu/jiex/papers/PGMORL/video.mp4" target="_blank" rel="noopener noreferrer">[Video]</a>
+            <span class="venue"><a href="https://icml.cc/Conferences/2020" target="_blank" rel="noopener noreferrer">ICML 2020</a></span> /
+            <a href="http://people.csail.mit.edu/jiex/papers/PGMORL/" target="_blank" rel="noopener noreferrer">Homepage</a> /
+            <a href="https://people.csail.mit.edu/jiex/papers/PGMORL/paper.pdf" target="_blank" rel="noopener noreferrer">Paper</a> /
+            <a href="https://github.com/mit-gfx/PGMORL" target="_blank" rel="noopener noreferrer">Code</a> /
+            <a href="https://people.csail.mit.edu/jiex/papers/PGMORL/video.mp4" target="_blank" rel="noopener noreferrer">Video</a> /
+            <a data-bs-toggle="collapse" href="#bibtex-pgmorl" onclick="return false">bibtex</a>
           </div>
         </div>
       </div>
       <!-- end -->
+
+      <!-- bibtex -->
+      <div class="collapse" id="bibtex-pgmorl">
+        <div class="row align-items-center section-item">
+          <div class="col col-wrapper">
+            <pre class="snippet">
+<code>@inproceedings{xu2020prediction,
+  title={Prediction-guided multi-objective reinforcement learning for continuous robot control},
+  author={Xu, Jie and Tian, Yunsheng and Ma, Pingchuan and Rus, Daniela and Sueda, Shinjiro and Matusik, Wojciech},
+  booktitle={International conference on machine learning},
+  pages={10607--10616},
+  year={2020},
+  organization={PMLR}
+}</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- begin -->
+      <div class="row align-items-center section-item">
+        <div class="col-xs-12 col-md-auto col-wrapper">
+          <div class="figure">
+            <a href="https://arxiv.org/abs/1911.11319" target="_blank" rel="noopener noreferrer">
+              <img src="assets/vsn/teaser.webp" alt="[VSN]">
+            </a>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md col-wrapper">
+          <div class="title">
+            <a href="https://arxiv.org/abs/1911.11319" target="_blank" rel="noopener noreferrer">
+              Learning Efficient Video Representation with Video Shuffle Networks
+            </a>
+          </div>
+          <div class="authors">
+            <me>Pingchuan Ma<sup>*</sup></me>,
+            <a href="https://scholar.google.com/citations?user=TeS4XUUAAAAJ" target="_blank" rel="noopener noreferrer">Yao Zhou</a><sup>*</sup>,
+            Yu Lu,
+            and
+            <a href="https://scholar.google.com/citations?user=5GtyVooAAAAJ" target="_blank" rel="noopener noreferrer">Wei Zhang</a>
+          </div>
+          <div class="link">
+            <span class="venue">arXiv 2019</span> /
+            <a href="https://arxiv.org/abs/1911.11319" target="_blank" rel="noopener noreferrer">Paper</a> /
+            <a data-bs-toggle="collapse" href="#bibtex-vsn" onclick="return false">bibtex</a>
+          </div>
+        </div>
+      </div>
+      <!-- end -->
+
+      <!-- bibtex -->
+      <div class="collapse" id="bibtex-vsn">
+        <div class="row align-items-center section-item">
+          <div class="col col-wrapper">
+            <pre class="snippet">
+<code>@article{ma2019learning,
+  title={Learning Efficient Video Representation with Video Shuffle Networks},
+  author={Ma, Pingchuan and Zhou, Yao and Lu, Yu and Zhang, Wei},
+  journal={arXiv preprint arXiv:1911.11319},
+  year={2019}
+}</code></pre>
+          </div>
+        </div>
+      </div>
 
       <!-- begin -->
       <div class="row align-items-center section-item">
         <div class="col-xs-12 col-md-auto col-wrapper">
           <div class="figure">
             <a href="https://gamma.cs.unc.edu/DRL_FluidRigid/" target="_blank" rel="noopener noreferrer">
-              <img src="images/rlfluid/teaser.webp" alt="[RLFluid]">
+              <img src="assets/rlfluid/teaser.webp" alt="[RLFluid]">
             </a>
           </div>
         </div>
@@ -550,60 +761,39 @@
             <a href="http://www.cs.unc.edu/~dm/" target="_blank" rel="noopener noreferrer">Dinesh Manocha</a>
           </div>
           <div class="link">
-            <span class="venue"><a href="https://s2018.siggraph.org/" target="_blank" rel="noopener noreferrer">[SIGGRAPH 2018]</a></span>
-            <a href="https://gamma.cs.unc.edu/DRL_FluidRigid" target="_blank" rel="noopener noreferrer">[Homepage]</a>
-            <a href="http://people.csail.mit.edu/pcma/data/rlfluid/paper.pdf" target="_blank" rel="noopener noreferrer">[Paper]</a>
-            <a href="https://youtu.be/O8QtAi2cHBI" target="_blank" rel="noopener noreferrer">[Video]</a>
+            <span class="venue"><a href="https://s2018.siggraph.org/" target="_blank" rel="noopener noreferrer">SIGGRAPH 2018</a></span> /
+            <a href="https://gamma.cs.unc.edu/DRL_FluidRigid" target="_blank" rel="noopener noreferrer">Homepage</a> /
+            <a href="assets/rlfluid/paper.pdf" target="_blank" rel="noopener noreferrer">Paper</a> /
+            <a href="https://youtu.be/O8QtAi2cHBI" target="_blank" rel="noopener noreferrer">Video</a> /
+            <a data-bs-toggle="collapse" href="#bibtex-rlfluid" onclick="return false">bibtex</a>
           </div>
         </div>
       </div>
       <!-- end -->
 
-    </div>
-    <div class="sec-wrapper pub-wrapper" id="pub">
-      <div class="row section-head">
-        <div class="col-sm-auto col-wrapper">
-          <div class="section-title">Preprints</div>
-        </div>
-        <div class="col-sm section-sub">
-          [* indicates equal contribution]
-        </div>
-      </div>
-
-      <!-- begin -->
-      <div class="row align-items-center section-item">
-        <div class="col-xs-12 col-md-auto col-wrapper">
-          <div class="figure">
-            <a href="https://arxiv.org/abs/1911.11319" target="_blank" rel="noopener noreferrer">
-              <img src="images/vsn/teaser.webp" alt="[VSN]">
-            </a>
-          </div>
-        </div>
-        <div class="col-xs-12 col-md col-wrapper">
-          <div class="title">
-            <a href="https://arxiv.org/abs/1911.11319" target="_blank" rel="noopener noreferrer">
-              Learning Efficient Video Representation with Video Shuffle Networks
-            </a>
-          </div>
-          <div class="authors">
-            <me>Pingchuan Ma<sup>*</sup></me>,
-            <a href="https://scholar.google.com/citations?user=TeS4XUUAAAAJ" target="_blank" rel="noopener noreferrer">Yao Zhou</a><sup>*</sup>,
-            Yu Lu,
-            and
-            <a href="https://scholar.google.com/citations?user=5GtyVooAAAAJ" target="_blank" rel="noopener noreferrer">Wei Zhang</a>
-          </div>
-          <div class="link">
-            <span class="venue">[arXiv]</span>
-            <a href="https://arxiv.org/abs/1911.11319" target="_blank" rel="noopener noreferrer">[Paper]</a>
+      <!-- bibtex -->
+      <div class="collapse" id="bibtex-rlfluid">
+        <div class="row align-items-center section-item">
+          <div class="col col-wrapper">
+            <pre class="snippet">
+<code>@article{ma2018fluid,
+  title={Fluid Directed Rigid Body Control using Deep Reinforcement Learning},
+  author={Ma, Pingchuan and Tian, Yunsheng and Pan, Zherong and Ren, Bo and Manocha, Dinesh},
+  journal={ACM Transactions on Graphics (TOG)},
+  volume={37},
+  number={4},
+  pages={1--11},
+  year={2018},
+  publisher={ACM New York, NY, USA}
+}</code></pre>
           </div>
         </div>
       </div>
-      <!-- end -->
 
     </div>
 
     <!-- Education -->
-    <div class="collapse" id="moreContent">
+    <div class="collapse" id="more-content">
       <div class="sec-wrapper exp-wrapper" id="edu">
         <div class="row section-head">
           <div class="col col-wrapper">
@@ -690,6 +880,26 @@
         <div class="row align-items-center section-item">
           <div class="col-md-9 col-wrapper">
             <div class="title">
+              <a href="https://research.nvidia.com/labs/srl/" target="_blank" rel="noopener noreferrer">NVIDIA Seattle Robotics Lab</a>
+            </div>
+            <div class="info">
+              <div>Research Assistant | Advisors:
+                <a href="https://people.csail.mit.edu/jiex/" target="_blank" rel="noopener noreferrer">Dr. Jie Xu</a>
+                and <a href="https://homes.cs.washington.edu/~fox/" target="_blank" rel="noopener noreferrer">Prof. Dieter Fox</a>
+              </div>
+              <div class="location">Seattle, WA</div>
+            </div>
+          </div>
+          <div class="col-md-3 col-wrapper">
+            <span class="time">
+              <fix>May 2024</fix> - <fix>Present</fix>
+            </span>
+          </div>
+        </div>
+
+        <div class="row align-items-center section-item">
+          <div class="col-md-9 col-wrapper">
+            <div class="title">
               <a href="https://www.eecs.mit.edu/" target="_blank" rel="noopener noreferrer">MIT EECS</a>
             </div>
             <div class="info">
@@ -720,43 +930,6 @@
             </span>
           </div>
         </div>
-
-        <!-- <div class="row align-items-center section-item">
-          <div class="col-md-9 col-wrapper">
-            <div class="title">
-              <a href="https://ailab.bytedance.com/">ByteDance AI Lab</a>
-            </div>
-            <div class="info">
-              <div>Research Intern | Advisors:
-                <a href="https://scholar.google.com.sg/citations?user=OEZ816YAAAAJ" target="_blank" rel="noopener noreferrer">Dr. Xiaojie Jin</a>
-                and <a href="https://scholar.google.com/citations?user=HWFvq_wAAAAJ" target="_blank" rel="noopener noreferrer">Dr. Jianchao Yang</a>
-              </div>
-              <div class="location">Beijing, China</div>
-            </div>
-          </div>
-          <div class="col-md-3 col-wrapper">
-            <span class="time">
-              <fix>Jul. 2019</fix> - <fix>Aug. 2019</fix>
-            </span>
-          </div>
-        </div> -->
-
-        <!-- <div class="row align-items-center section-item">
-          <div class="col-md-9 col-wrapper">
-            <div class="title">
-              <a href="https://www.hku.hk/" target="_blank" rel="noopener noreferrer">The University of Hong Kong</a>
-            </div>
-            <div class="info">
-              <div>Research Assistant | Advisor: <a href="https://sites.google.com/site/panjia/" target="_blank" rel="noopener noreferrer">Prof. Jia Pan</a></div>
-              <div class="location">Hong Kong</div>
-            </div>
-          </div>
-          <div class="col-md-3 col-wrapper">
-            <span class="time">
-              <fix>Feb. 2019</fix> - <fix>May 2019</fix>
-            </span>
-          </div>
-        </div> -->
 
         <div class="row align-items-center section-item">
           <div class="col-md-9 col-wrapper">
@@ -800,17 +973,27 @@
       </div>
     </div>
 
+    <!-- If you are using my template, please kindly cite the source as follows -->
+    <!-- <footer class="footer sec-wrapper">
+      <div class="text-muted">
+        <a href="https://pingchuan.ma/" target="_blank" rel="noopener noreferrer">Template</a>
+      </div>
+    </footer> -->
+
     <!-- Footer -->
     <footer class="footer sec-wrapper">
-      <div class="text-muted">Copyright &copy; <span id="year"></span> Pingchuan Ma</div>
-      <div class="text-muted row">
-        <div class="col left"><a href="https://www.csail.mit.edu/" target="_blank" rel="noopener noreferrer">MIT CSAIL</a></div>
-        <div class="col col-auto icon"><i class="bi bi-dot"></i></div>
-        <div class="col right"><a href="https://accessibility.mit.edu/" target="_blank" rel="noopener noreferrer">Accessibility</a></div>
+      <div class="text-muted">Feel free to build your homepage upon my <a class="template" href="https://github.com/PingchuanMa/PingchuanMa.github.io" target="_blank" rel="noopener noreferrer">template</a> ;)</div>
+      <div class="text-muted">
+        Copyright &copy; <span id="year"></span> Pingchuan Ma
+        <i class="bi bi-dot"></i>
+        <a href="https://accessibility.mit.edu/" target="_blank" rel="noopener noreferrer">Accessibility</a>
       </div>
     </footer>
+
   </div>
+
 </body>
+
 <script async defer src="js/script.js"></script>
 
 </html>
