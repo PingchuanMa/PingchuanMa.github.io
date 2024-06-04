@@ -86,6 +86,7 @@ a:hover {
 }
 
 .section-sub {
+  font-size: 14px;
   padding-left: 0;
   color: var(--dark-gray);
 }
