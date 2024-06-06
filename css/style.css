@@ -1,9 +1,24 @@
 :root {
+
   --cardinal: #750014;
   --very-light-orange: #fdf3ea;
   --very-light-gray: #f1f1f1;
   --light-gray: #c2c0bf;
   --dark-gray: #8a8b8c;
+
+  --font-size: 14px;
+  --mobile-font-size: 16px;
+
+  --line-height: 24px;
+  --mobile-line-height: 26px;
+
+  --section-title-font-size: 20px;
+  --mobile-section-title-font-size: 22px;
+
+  --name-font-size: 32px;
+
+  --code-font-size: 12px;
+  --code-line-height: 18px;
 }
 
 @font-face {
@@ -24,16 +39,16 @@
 
 body {
   font-family: "Lato", "Helvetica Neue", Ubuntu, Arial, PingFang, SimHei, sans-serif;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
   color: black;
   font-weight: normal;
   background: white;
 }
 
 .blockquote {
-  font-size: 14px;
-  line-height: 24px;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
 }
 
 body .container,
@@ -73,8 +88,8 @@ a:hover {
 
 .section-title {
   font-weight: normal;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: var(--section-title-font-size);
+  line-height: var(--line-height);
   display: inline-block;
 }
 
@@ -88,8 +103,8 @@ a:hover {
 }
 
 .section-sub {
-  font-size: 14px;
-  line-height: 24px;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
   color: var(--dark-gray);
 }
 
@@ -100,18 +115,18 @@ a:hover {
 
 @media (max-width: 767.98px) {
   body {
-    font-size: 18px;
-    line-height: 28px;
+    font-size: var(--mobile-font-size);
+    line-height: var(--mobile-line-height);
   }
 
   .blockquote {
-    font-size: 18px;
-    line-height: 28px;
+    font-size: var(--mobile-font-size);
+    line-height: var(--mobile-line-height);
   }
 
   .section-title {
-    font-size: 24px;
-    line-height: 28px;
+    font-size: var(--mobile-section-title-font-size);
+    line-height: var(--mobile-line-height);
   }
 }
 
@@ -136,7 +151,7 @@ a:hover {
 }
 
 .home-wrapper .description .name {
-  font-size: 32px;
+  font-size: var(--name-font-size);
   margin-bottom: 20px;
 }
 
@@ -178,8 +193,8 @@ a:hover {
 }
 
 .name-wrapper .blockquote-footer {
-  font-size: 14px;
-  line-height: 24px;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
   margin-top: 0;
 }
 
@@ -263,8 +278,8 @@ a:hover {
 .snippet {
   position: relative;
   background: var(--very-light-gray);
-  font-size: 12px;
-  line-height: 16px;
+  font-size: var(--code-font-size);
+  line-height: var(--code-line-height);
   margin-top: 10px;
   margin-bottom: 0;
   border-radius: 2px;
@@ -282,10 +297,10 @@ a:hover {
   right: 4px;
   top: 4px;
   font-size: 14px;
+  line-height: 21px;
   background-color: white;
   border: 2px solid var(--light-gray);
   border-radius: 2px;
-  line-height: 21px;
 }
 
 .snippet .btn:hover {
@@ -342,8 +357,8 @@ a:hover {
  *------------------*/
 
 .citation {
-  font-size: 12px;
-  line-height: 16px;
+  font-size: var(--code-font-size);
+  line-height: var(--code-line-height);
   margin-top: 40px;
   margin-bottom: 30px;
 }
