@@ -66,3 +66,21 @@ clipboardSnippets.on('success', function(e) {
     tooltip.hide();
   }, 2000);
 });
+
+
+// External links
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Select all anchor tags with an href attribute
+  const links = document.querySelectorAll('a[href]');
+
+  // Iterate through each link
+  links.forEach(function(link) {
+    // Check if the href attribute does not start with '#'
+    if (!link.getAttribute('href').startsWith('#')) {
+        // Set the target and rel attributes
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+    }
+  });
+});
