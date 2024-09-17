@@ -78,6 +78,11 @@ a:hover {
   text-decoration: underline;
 }
 
+.highlight {
+  color: var(--cardinal);
+  font-weight: bold;
+}
+
 .section-item {
   margin-top: 20px;
 }
@@ -240,11 +245,6 @@ a:hover {
 
 .pub-wrapper .link a:hover {
   color: black;
-}
-
-.pub-wrapper .highlight {
-  color: var(--cardinal);
-  font-weight: bold;
 }
 
 .pub-wrapper .authors {
