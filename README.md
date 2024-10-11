@@ -4,6 +4,6 @@ Repository for a research-oriented personal homepage. Please preview the homepag
 
 TODOs if you are using this repository:
 
-1. **[Important]** Remove or replace the Google Analytics script in `index.html`.
-2. Update the name, contact information, biography, publications, and experiences with your own details.
+1. Update the name, contact information, biography, publications, and experiences with your own details.
+2. Remove `CNAME` file or update it with your own domain name.
 3. (Optional) Cite this repository on your homepage to help spread the word ;) You can find a template reference at the end of `index.html`.
