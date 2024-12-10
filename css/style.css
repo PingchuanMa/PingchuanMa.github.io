@@ -1,8 +1,8 @@
 :root {
   --cardinal: #750014;
   --very-light-cardinal: #fff2f4;
-  --light-cardinal: #ffafbb;
-  --dark-cardinal: #200004;
+  --light-cardinal: #ff94a4;
+  --dark-cardinal: #200000;
   --very-light-gray: #f1f1f1;
   --light-gray: #c2c0bf;
   --dark-gray: #8a8b8c;
@@ -12,7 +12,7 @@
   --background: white;
 
   --night-text: white;
-  --night-background: #181818;
+  --night-background: #121414;
 
   --page-width: 768px;
 
