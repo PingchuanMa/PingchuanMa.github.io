@@ -1,12 +1,12 @@
 :root {
   --cardinal: #750014;
-  --light-cardinal: #ffb0bd;
+  --very-light-cardinal: #fff2f4;
+  --light-cardinal: #ffafbb;
+  --dark-cardinal: #200004;
   --very-light-gray: #f1f1f1;
   --light-gray: #c2c0bf;
   --dark-gray: #8a8b8c;
   --very-dark-gray: #2d2d2d;
-  --very-light-orange: #fdf3ea;
-  --dark-orange: #382200;
 
   --text: black;
   --background: white;
@@ -142,13 +142,13 @@ a:hover {
 }
 
 .representative {
-  background-color: var(--very-light-orange);
+  background-color: var(--very-light-cardinal);
   border-radius: 2px;
 }
 
 @media (prefers-color-scheme: dark) {
   .representative {
-    background-color: var(--dark-orange);
+    background-color: var(--dark-cardinal);
   }
 }
 
