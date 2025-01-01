@@ -22,7 +22,7 @@ function profile_enter() {
 }
 
 function profile_leave() {
-  profile.src = "assets/profile/myself.webp";
+  profile.src = "assets/profile/pcma.webp";
 }
 
 profile_credit.addEventListener("mouseenter", profile_enter);
