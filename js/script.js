@@ -1,86 +1,251 @@
-// More content
+/*!
+ * Color mode toggler for Bootstrap's docs (https://getbootstrap.com/)
+ * Copyright 2011-2025 The Bootstrap Authors
+ * Licensed under the Creative Commons Attribution 3.0 Unported License.
+ */
 
-var moreContent = document.getElementById("more-content");
-moreContent.addEventListener("shown.bs.collapse", function() {
-  this.scrollIntoView();
-});
+(() => {
+  'use strict';
 
-// Profile
+  // Theme management utilities
+  const ThemeManager = {
+    getStoredTheme: () => localStorage.getItem('theme'),
+    setStoredTheme: theme => localStorage.setItem('theme', theme),
 
-var counter = 0;
-var hoverImages = [
-  "assets/profile/cuda.webp",
-  "assets/profile/mcflurry.webp",
-];
+    getPreferredTheme() {
+      const storedTheme = this.getStoredTheme();
+      if (storedTheme) return storedTheme;
 
-var profile_credit = document.getElementById("profile-credit");
-var profile = document.getElementById("profile");
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    },
 
-function profile_enter() {
-  profile.src = hoverImages[counter];
-  counter = (counter + 1) % hoverImages.length;
-}
+    setTheme(theme) {
+      const resolvedTheme = theme === 'auto'
+        ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+        : theme;
 
-function profile_leave() {
-  profile.src = "assets/profile/pcma.webp";
-}
+      document.documentElement.setAttribute('data-bs-theme', resolvedTheme);
+    },
 
-profile_credit.addEventListener("mouseenter", profile_enter);
-profile_credit.addEventListener("mouseleave", profile_leave);
-profile_leave();
+    showActiveTheme(theme, focus = false) {
+      const themeSwitcher = document.querySelector('#bd-theme');
+      if (!themeSwitcher) return;
 
-// Footer year
+      const themeSwitcherText = document.querySelector('#bd-theme-text');
+      const activeThemeIcon = document.querySelector('.theme-icon-active use');
+      const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`);
 
-var d = new Date();
-document.getElementById('year').innerHTML = d.getFullYear();
+      if (!btnToActive) return;
 
-// Clipboard
+      const svgOfActiveBtn = btnToActive.querySelector('svg use')?.getAttribute('href');
 
-var snippets = document.querySelectorAll('.snippet');
+      // Reset all theme buttons
+      document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+        element.classList.remove('active');
+        element.setAttribute('aria-pressed', 'false');
+      });
 
-[].forEach.call(snippets, function(snippet) {
-  snippet.firstChild.insertAdjacentHTML(
-    'beforebegin',
-    '<button class="btn" data-bs-toggle="tooltip" data-bs-title="Copy to clipboard" data-clipboard-snippet><i class="bi bi-clipboard"></i></button>');
-});
+      // Activate current theme button
+      btnToActive.classList.add('active');
+      btnToActive.setAttribute('aria-pressed', 'true');
 
-const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+      if (activeThemeIcon && svgOfActiveBtn) {
+        activeThemeIcon.setAttribute('href', svgOfActiveBtn);
+      }
 
-var clipboardSnippets = new ClipboardJS('[data-clipboard-snippet]', {
-  target: function(trigger) {
-    return trigger.nextElementSibling;
-  }
-});
+      if (themeSwitcherText) {
+        const themeSwitcherLabel = `${themeSwitcherText.textContent} (${btnToActive.dataset.bsThemeValue})`;
+        themeSwitcher.setAttribute('aria-label', themeSwitcherLabel);
+      }
 
-clipboardSnippets.on('success', function(e) {
-  e.clearSelection();
-  var icon = e.trigger.querySelector('i');
-  icon.className = 'bi bi-check2';
-  var tooltip = bootstrap.Tooltip.getInstance(e.trigger);
-  tooltip.setContent({'.tooltip-inner': 'Copied!'});
-  tooltip.show();
-  setTimeout(function() {
-    icon.className = 'bi bi-clipboard';
-    tooltip.setContent({'.tooltip-inner': 'Copy to clipboard'});
-    tooltip.hide();
-  }, 2000);
-});
+      if (focus) themeSwitcher.focus();
+    },
 
+    updateToggleButtonIcon(theme) {
+      const themeToggleBtn = document.getElementById('theme-toggle');
+      if (!themeToggleBtn) return;
 
-// External links
+      const icon = themeToggleBtn.querySelector('i');
+      if (!icon) return;
 
-document.addEventListener("DOMContentLoaded", function() {
-  // Select all anchor tags with an href attribute
-  const links = document.querySelectorAll('a[href]');
+      if (theme === 'dark') {
+        icon.className = 'bi bi-moon-fill';
+      } else {
+        icon.className = 'bi bi-sun-fill';
+      }
+    },
 
-  // Iterate through each link
-  links.forEach(function(link) {
-    // Check if the href attribute does not start with '#'
-    if (!link.getAttribute('href').startsWith('#')) {
-        // Set the target and rel attributes
+    handleThemeChange(toggle) {
+      let theme = toggle.getAttribute('data-bs-theme-value');
+
+      if (theme === 'toggle') {
+        const currentTheme = this.getStoredTheme() || this.getPreferredTheme();
+        theme = currentTheme === 'light' ? 'dark' : 'light';
+        this.updateToggleButtonIcon(theme);
+      }
+
+      this.setStoredTheme(theme);
+      this.setTheme(theme);
+      this.showActiveTheme(theme, true);
+    },
+
+    init() {
+      // Set initial theme
+      const initialTheme = this.getPreferredTheme();
+      this.setTheme(initialTheme);
+      this.showActiveTheme(initialTheme);
+
+      // Listen for system theme changes
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+        const storedTheme = this.getStoredTheme();
+        if (storedTheme !== 'light' && storedTheme !== 'dark') {
+          this.setTheme(this.getPreferredTheme());
+        }
+      });
+
+      // Initialize theme toggle buttons
+      document.querySelectorAll('[data-bs-theme-value]').forEach(toggle => {
+        toggle.addEventListener('click', () => this.handleThemeChange(toggle));
+      });
+
+      // Initialize toggle button icon
+      this.updateToggleButtonIcon(initialTheme);
+    }
+  };
+
+  // Profile image hover effects
+  const ProfileManager = {
+    counter: 0,
+    hoverImages: [
+      "assets/profile/cuda.webp",
+      "assets/profile/mcflurry.webp",
+    ],
+    defaultImage: "assets/profile/pcma.webp",
+
+    init() {
+      const profileCredit = document.getElementById("profile-credit");
+      const profileImg = document.getElementById("profile");
+
+      if (!profileCredit || !profileImg) return;
+
+      profileCredit.addEventListener("mouseenter", () => this.showHoverImage(profileImg));
+      profileCredit.addEventListener("mouseleave", () => this.showDefaultImage(profileImg));
+
+      // Set initial image
+      this.showDefaultImage(profileImg);
+    },
+
+    showHoverImage(profileImg) {
+      profileImg.src = this.hoverImages[this.counter];
+      this.counter = (this.counter + 1) % this.hoverImages.length;
+    },
+
+    showDefaultImage(profileImg) {
+      profileImg.src = this.defaultImage;
+    }
+  };
+
+  // Clipboard functionality
+  const ClipboardManager = {
+    init() {
+      this.addCopyButtons();
+      this.initializeTooltips();
+      this.setupClipboard();
+    },
+
+    addCopyButtons() {
+      const snippets = document.querySelectorAll('.snippet');
+
+      snippets.forEach(snippet => {
+        const button = document.createElement('button');
+        button.className = 'btn';
+        button.setAttribute('data-bs-toggle', 'tooltip');
+        button.setAttribute('data-bs-title', 'Copy to clipboard');
+        button.setAttribute('data-clipboard-snippet', '');
+        button.innerHTML = '<i class="bi bi-clipboard"></i>';
+
+        snippet.insertBefore(button, snippet.firstChild);
+      });
+    },
+
+    initializeTooltips() {
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+      [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+    },
+
+    setupClipboard() {
+      const clipboardSnippets = new ClipboardJS('[data-clipboard-snippet]', {
+        target: trigger => trigger.nextElementSibling
+      });
+
+      clipboardSnippets.on('success', e => {
+        e.clearSelection();
+        this.showCopySuccess(e.trigger);
+      });
+    },
+
+    showCopySuccess(trigger) {
+      const icon = trigger.querySelector('i');
+      const tooltip = bootstrap.Tooltip.getInstance(trigger);
+
+      if (!icon || !tooltip) return;
+
+      // Show success state
+      icon.className = 'bi bi-check2';
+      tooltip.setContent({'.tooltip-inner': 'Copied!'});
+      tooltip.show();
+
+      // Reset after 2 seconds
+      setTimeout(() => {
+        icon.className = 'bi bi-clipboard';
+        tooltip.setContent({'.tooltip-inner': 'Copy to clipboard'});
+        tooltip.hide();
+      }, 2000);
+    }
+  };
+
+  // Utility functions
+  const Utils = {
+    setFooterYear() {
+      const yearElement = document.getElementById('year');
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+    },
+
+    setupMoreContentScroll() {
+      const moreContent = document.getElementById("more-content");
+      if (moreContent) {
+        moreContent.addEventListener("shown.bs.collapse", function() {
+          this.scrollIntoView();
+        });
+      }
+    },
+
+    setupExternalLinks() {
+      const links = document.querySelectorAll('a[href]:not([href^="#"])');
+
+      links.forEach(link => {
         link.setAttribute('target', '_blank');
         link.setAttribute('rel', 'noopener noreferrer');
+      });
     }
-  });
-});
+  };
+
+  // Initialize everything when DOM is ready
+  const initializeApp = () => {
+    ThemeManager.init();
+    ProfileManager.init();
+    ClipboardManager.init();
+    Utils.setFooterYear();
+    Utils.setupMoreContentScroll();
+    Utils.setupExternalLinks();
+  };
+
+  // Start the application
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeApp);
+  } else {
+    initializeApp();
+  }
+})();

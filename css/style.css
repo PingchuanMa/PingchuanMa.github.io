@@ -56,11 +56,9 @@ body {
   background: var(--background);
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    color: var(--night-text);
-    background: var(--night-background);
-  }
+[data-bs-theme=dark] body {
+  color: var(--night-text);
+  background: var(--night-background);
 }
 
 .blockquote {
@@ -90,17 +88,14 @@ a:hover,
   color: var(--cardinal);
 }
 
-@media (prefers-color-scheme: dark) {
-  a,
-  a:hover,
-  .highlight {
-    color: var(--light-cardinal);
-  }
+[data-bs-theme=dark] a,
+[data-bs-theme=dark] a:hover,
+[data-bs-theme=dark] .highlight {
+  color: var(--light-cardinal);
 }
 
 a {
   text-decoration: none;
-  transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
 }
 
 a:hover {
@@ -146,10 +141,8 @@ a:hover {
   border-radius: 2px;
 }
 
-@media (prefers-color-scheme: dark) {
-  .representative {
-    background-color: var(--dark-cardinal);
-  }
+[data-bs-theme=dark] .representative {
+  background-color: var(--dark-cardinal);
 }
 
 @media (max-width: 767.98px) {
@@ -173,6 +166,30 @@ a:hover {
   .section-sub {
     padding-left: 0;
   }
+}
+
+/*------------------
+ * Theme Toggle Button
+ *------------------*/
+
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  vertical-align: middle;
+  transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+  color: var(--text);
+}
+
+[data-bs-theme=dark] .theme-toggle-btn {
+  color: var(--night-text);
+}
+
+.theme-toggle-btn:focus,
+.theme-toggle-btn:active {
+  outline: none;
+  box-shadow: none;
+  border: none;
 }
 
 /*-----------------
@@ -210,11 +227,9 @@ a:hover {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  .bio-wrapper .info,
-  .bio-wrapper .info:hover {
-    color: var(--night-text);
-  }
+[data-bs-theme=dark] .bio-wrapper .info,
+[data-bs-theme=dark] .bio-wrapper .info:hover {
+  color: var(--night-text);
 }
 
 .bio-wrapper .zh-name:hover {
@@ -238,11 +253,9 @@ a:hover {
   border-bottom: 1.5px dashed currentColor;
 }
 
-@media (prefers-color-scheme: dark) {
-  .name-wrapper .zh-a,
-  .name-wrapper .zh-a:hover {
-    color: var(--night-text);
-  }
+[data-bs-theme=dark] .name-wrapper .zh-a,
+[data-bs-theme=dark] .name-wrapper .zh-a:hover {
+  color: var(--night-text);
 }
 
 .name-wrapper .blockquote-footer {
@@ -279,10 +292,8 @@ a:hover {
   color: var(--text);
 }
 
-@media (prefers-color-scheme: dark) {
-  .pub-wrapper a {
-    color: var(--night-text);
-  }
+[data-bs-theme=dark] .pub-wrapper a {
+  color: var(--night-text);
 }
 
 .pub-wrapper .title a {
@@ -330,20 +341,16 @@ a:hover {
   border-radius: 2px;
 }
 
-@media (prefers-color-scheme: dark) {
-  .snippet {
-    background: var(--very-dark-gray);
-  }
+[data-bs-theme=dark] .snippet {
+  background: var(--very-dark-gray);
 }
 
 .representative .snippet {
   background: var(--background);
 }
 
-@media (prefers-color-scheme: dark) {
-  .representative .snippet {
-    background: var(--night-background);
-  }
+[data-bs-theme=dark] .representative .snippet {
+  background: var(--night-background);
 }
 
 .snippet .btn {
@@ -361,12 +368,10 @@ a:hover {
   color: var(--text);
 }
 
-@media (prefers-color-scheme: dark) {
-  .snippet .btn {
-    background-color: var(--night-background);
-    border-color: var(--dark-gray);
-    color: var(--night-text);
-  }
+[data-bs-theme=dark] .snippet .btn {
+  background-color: var(--night-background);
+  border-color: var(--dark-gray);
+  color: var(--night-text);
 }
 
 .snippet .btn:hover {
@@ -375,11 +380,9 @@ a:hover {
   border-color: var(--dark-gray);
 }
 
-@media (prefers-color-scheme: dark) {
-  .snippet .btn:hover {
-    background-color: var(--night-background);
-    border-color: var(--light-gray);
-  }
+[data-bs-theme=dark] .snippet .btn:hover {
+  background-color: var(--night-background);
+  border-color: var(--light-gray);
 }
 
 .snippet .btn:active {
@@ -388,11 +391,9 @@ a:hover {
   border-color: var(--dark-gray);
 }
 
-@media (prefers-color-scheme: dark) {
-  .snippet .btn:active {
-    background-color: var(--very-dark-gray);
-    border-color: var(--light-gray);
-  }
+[data-bs-theme=dark] .snippet .btn:active {
+  background-color: var(--very-dark-gray);
+  border-color: var(--light-gray);
 }
 
 .snippet code {
@@ -413,11 +414,9 @@ a:hover {
   color: var(--text);
 }
 
-@media (prefers-color-scheme: dark) {
-  .exp-wrapper a,
-  .exp-wrapper a:hover {
-    color: var(--night-text);
-  }
+[data-bs-theme=dark] .exp-wrapper a,
+[data-bs-theme=dark] .exp-wrapper a:hover {
+  color: var(--night-text);
 }
 
 .exp-wrapper .time {
