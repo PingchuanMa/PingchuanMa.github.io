@@ -70,18 +70,18 @@
 
     <!-- Bio -->
     <div class="sec-wrapper bio-wrapper" id="bio">
-      <div class="row section-head">
+      <!-- <div class="row section-head">
         <div class="col col-wrapper">
           <div class="section-title">Biography</div>
         </div>
-      </div>
+      </div> -->
       <div class="row section-item">
         <div class="col col-wrapper">
           Pingchuan Ma
           <a class="info" data-bs-toggle="collapse" href="#name-content" id="name-trigger" title="Learn my name" onclick="return false">
             (<span class="zh-name">馬平川</span>)
           </a>
-          is an AI Research Scientist at <a href="https://www.meta.com/">Meta</a> Superintelligence Labs,
+          is an AI Research Scientist at <a href="https://www.meta.com/">Meta</a> Superintelligence Labs.
           Previously, he worked on multimodal and post-training at <a href="https://openai.com/">OpenAI</a>.
           He earned his Ph.D. from <a href="https://www.csail.mit.edu/">MIT CSAIL</a>,
           advised by Prof. <a href="https://cdfg.mit.edu/wojciech">Wojciech Matusik</a>,
@@ -148,6 +148,66 @@
           (* indicates equal contribution, <span class="representative">highlight</span> indicates representative papers)
         </div>
       </div>
+
+      <!-- begin -->
+      <div class="section-item">
+        <div class="row align-items-center">
+          <div class="col-xs-12 col-md-auto col-wrapper">
+            <div class="figure">
+              <a href="https://fabrica.csail.mit.edu/">
+                <img src="assets/fabrica/teaser.webp" alt="[Fabrica]">
+              </a>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md col-wrapper">
+            <div class="title">
+              <a href="https://fabrica.csail.mit.edu/">
+                Fabrica: Dual-Arm Assembly of General Multi-Part Objects via Integrated Planning and Learning
+              </a>
+            </div>
+            <div class="authors">
+              <a href="https://www.yunshengtian.com/">Yunsheng Tian</a>,
+              <a href="https://scholar.google.com/citations?user=MrhRMMkAAAAJ">Joshua Jacob</a>,
+              <a href="https://yijiangh.github.io/">Yijiang Huang</a>,
+              <a href="https://alanz.info/">Jialiang Zhao</a>,
+              <a href="https://scholar.google.com/citations?user=Blh6T1cAAAAJ">Edward Gu</a>,
+              <me>Pingchuan Ma</me>,
+              <a href="https://www.annanzhang.com/">Annan Zhang</a>,
+              <a href="https://scholar.google.com/citations?user=FZ40JEsAAAAJ">Farhad Javid</a>,
+              <a href="https://scholar.google.com/citations?user=0lns2BAAAAAJ">Branden Romero</a>,
+              <a href="https://www.sachinchitta.com/">Sachin Chitta</a>,
+              <a href="https://people.engr.tamu.edu/sueda/index.html">Shinjiro Sueda</a>,
+              <a href="https://www.research.autodesk.com/people/hui-li/">Hui Li</a>,
+              and
+              <a href="https://cdfg.mit.edu/wojciech">Wojciech Matusik</a>
+            </div>
+            <div class="link">
+              <span class="venue"><a href="https://www.corl.org/">CoRL 2025</a></span> /
+              <a href="https://fabrica.csail.mit.edu/">Homepage</a> /
+              <a href="https://arxiv.org/abs/2506.05168">Paper</a> /
+              <a href="https://fabrica.csail.mit.edu/static/videos/video_main.mp4">Video</a> /
+              <a data-bs-toggle="collapse" href="#bibtex-fabrica" onclick="return false">bibtex</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- bibtex -->
+        <div class="collapse" id="bibtex-fabrica">
+          <div class="row align-items-center">
+            <div class="col col-wrapper">
+              <pre class="snippet">
+<code>@inproceedings{tian2025fabrica,
+  title={{Fabrica}: Dual-Arm Assembly of General Multi-Part Objects via Integrated Planning and Learning},
+  author={Tian, Yunsheng and Jacob, Joshua and Huang, Yijiang and Zhao, Jialiang and Gu, Edward and Ma, Pingchuan and Zhang, Annan and Javid, Farhad and Romero, Branden and Chitta, Sachin and Sueda, Shinjiro and Li, Hui and Matusik, Wojciech},
+  booktitle={Conference on Robot Learning},
+  year={2025},
+  organization={PMLR}
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end -->
 
       <!-- begin -->
       <div class="section-item">
@@ -248,7 +308,7 @@
             <div class="col col-wrapper">
               <pre class="snippet">
 <code>@inproceedings{gu2025roictrl,
-  title={{ROICtrl}: Boosting instance control for visual generation},
+  title={{ROICtrl}: Boosting Instance Control for Visual Generation},
   author={Gu, Yuchao and Zhou, Yipin and Ye, Yunfan and Nie, Yixin and Yu, Licheng and Ma, Pingchuan and Lin, Kevin Qinghong and Shou, Mike Zheng},
   booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
   pages={23658--23667},
@@ -356,8 +416,8 @@
             <div class="col col-wrapper">
               <pre class="snippet">
 <code>@article{guo2024physically,
-  author={Guo, Minghao and Wang, Bohan and Ma, Pingchuan and Zhang, Tianyuan and Owens, Crystal Elaine and Gan, Chuang and Tenenbaum, Joshua B. and He, Kaiming and Matusik, Wojciech},
   title={Physically Compatible 3D Object Modeling from a Single Image},
+  author={Guo, Minghao and Wang, Bohan and Ma, Pingchuan and Zhang, Tianyuan and Owens, Crystal Elaine and Gan, Chuang and Tenenbaum, Joshua B. and He, Kaiming and Matusik, Wojciech},
   journal={Advances in Neural Information Processing Systems},
   volume={37},
   year={2024}
@@ -459,7 +519,7 @@
             <div class="col col-wrapper">
               <pre class="snippet">
 <code>@article{liu2024kan,
-  title={Kan 2.0: Kolmogorov-arnold networks meet science},
+  title={{KAN} 2.0: Kolmogorov-Arnold Networks Meet Science},
   author={Liu, Ziming and Ma, Pingchuan and Wang, Yixuan and Matusik, Wojciech and Tegmark, Max},
   journal={arXiv preprint arXiv:2408.10205},
   year={2024}
@@ -573,8 +633,8 @@
             <div class="col col-wrapper">
               <pre class="snippet">
 <code>@inproceedings{tian2024asap,
-  title={Asap: Automated sequence planning for complex robotic assembly with physical feasibility},
-  author={Tian, Yunsheng and Willis, Karl DD and Al Omari, Bassel and Luo, Jieliang and Ma, Pingchuan and Li, Yichen and Javid, Farhad and Gu, Edward and Jacob, Joshua and Sueda, Shinjiro and others},
+  title={{ASAP}: Automated Sequence Planning for Complex Robotic Assembly with Physical Feasibility},
+  author={Tian, Yunsheng and Willis, Karl DD and Al Omari, Bassel and Luo, Jieliang and Ma, Pingchuan and Li, Yichen and Javid, Farhad and Gu, Edward and Jacob, Joshua and Sueda, Shinjiro and Li, Hui and Chitta, Sachin and Matusik, Wojciech},
   booktitle={2024 IEEE International Conference on Robotics and Automation (ICRA)},
   pages={4380--4386},
   year={2024},
@@ -630,7 +690,7 @@
             <div class="col col-wrapper">
               <pre class="snippet">
 <code>@article{wang2024diffusebot,
-  title={{DiffuseBot}: Breeding Soft Robots With Physics-Augmented Generative Diffusion Models},
+  title={{DiffuseBot}: Breeding Soft Robots with Physics-Augmented Generative Diffusion Models},
   author={Wang, Tsun-Hsuan Johnson and Zheng, Juntian and Ma, Pingchuan and Du, Yilun and Kim, Byungchul and Spielberg, Andrew and Tenenbaum, Josh and Gan, Chuang and Rus, Daniela},
   journal={Advances in Neural Information Processing Systems},
   volume={36},
@@ -710,7 +770,7 @@
           <div class="col-xs-12 col-md col-wrapper">
             <div class="title">
               <a href="https://sites.google.com/view/softzoo-iclr-2023">
-                SoftZoo: A Soft Robot Co-design Benchmark For Locomotion In Diverse Environments
+                SoftZoo: A Soft Robot Co-Design Benchmark for Locomotion in Diverse Environments
               </a>
             </div>
             <div class="authors">
@@ -740,7 +800,7 @@
             <div class="col col-wrapper">
               <pre class="snippet">
 <code>@inproceedings{wang2022softzoo,
-  title={{SoftZoo}: A Soft Robot Co-design Benchmark for Locomotion in Diverse Environments},
+  title={{SoftZoo}: A Soft Robot Co-Design Benchmark for Locomotion in Diverse Environments},
   author={Wang, Tsun-Hsuan and Ma, Pingchuan and Spielberg, Andrew Everett and Xian, Zhou and Zhang, Hao and Tenenbaum, Joshua B and Rus, Daniela and Gan, Chuang},
   booktitle={The Eleventh International Conference on Learning Representations},
   year={2022}
@@ -792,7 +852,7 @@
             <div class="col col-wrapper">
               <pre class="snippet">
 <code>@inproceedings{zhang2022sim2real,
-  title={Sim2real for soft robotic fish via differentiable simulation},
+  title={Sim2Real for Soft Robotic Fish via Differentiable Simulation},
   author={Zhang, John Z and Zhang, Yu and Ma, Pingchuan and Nava, Elvis and Du, Tao and Arm, Philip and Matusik, Wojciech and Katzschmann, Robert K},
   booktitle={2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
   pages={12598--12605},
@@ -1121,7 +1181,7 @@
             <div class="col col-wrapper">
               <pre class="snippet">
 <code>@inproceedings{xu2020prediction,
-  title={Prediction-guided multi-objective reinforcement learning for continuous robot control},
+  title={Prediction-Guided Multi-Objective Reinforcement Learning for Continuous Robot Control},
   author={Xu, Jie and Tian, Yunsheng and Ma, Pingchuan and Rus, Daniela and Sueda, Shinjiro and Matusik, Wojciech},
   booktitle={International conference on machine learning},
   pages={10607--10616},
@@ -1196,7 +1256,7 @@
           <div class="col-xs-12 col-md col-wrapper">
             <div class="title">
               <a href="https://gamma.cs.unc.edu/DRL_FluidRigid/">
-                Fluid Directed Rigid Body Control using Deep Reinforcement Learning
+                Fluid Directed Rigid Body Control Using Deep Reinforcement Learning
               </a>
             </div>
             <div class="authors">
@@ -1222,7 +1282,7 @@
             <div class="col col-wrapper">
               <pre class="snippet">
 <code>@article{ma2018fluid,
-  title={Fluid Directed Rigid Body Control using Deep Reinforcement Learning},
+  title={Fluid Directed Rigid Body Control Using Deep Reinforcement Learning},
   author={Ma, Pingchuan and Tian, Yunsheng and Pan, Zherong and Ren, Bo and Manocha, Dinesh},
   journal={ACM Transactions on Graphics (TOG)},
   volume={37},
